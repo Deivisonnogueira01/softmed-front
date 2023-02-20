@@ -1,0 +1,12 @@
+<div *ngFor="let pergunta of repository">
+    <h2>{{ pergunta.repository }}</h2>
+    <ul>
+      <li *ngFor="let opcao of pergunta.opcoes">
+        <label>
+          <input type="radio" name="{{ pergunta.pergunta }}" value="{{ opcao }}">
+          {{ opcao }}
+        </label>
+      </li>
+    </ul>
+  </div>
+  

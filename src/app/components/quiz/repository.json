@@ -1,0 +1,14 @@
+[  {    "pergunta": "Qual é a capital do Brasil?",    "opcoes": [      "São Paulo",      "Brasília",      "Rio de Janeiro",      "Belo Horizonte"    ],
+    "resposta": "Brasília"
+  },
+  {
+    "pergunta": "Quem é o autor de Dom Quixote?",
+    "opcoes": [
+      "Miguel de Cervantes",
+      "William Shakespeare",
+      "Jorge Luis Borges",
+      "Gabriel García Márquez"
+    ],
+    "resposta": "Miguel de Cervantes"
+  }
+]

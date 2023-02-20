@@ -1,0 +1,23 @@
+mat-card {
+    width: 100%;
+    height: auto;
+}
+
+.banner{   /*Casos Clinicos */
+
+}
+
+.full-width{
+    width: 100%;
+    height: 100%;
+}
+
+.envio{
+    background-color: aqua;
+    background-size: 20%;
+}
+
+
+mat-grid-tile {  
+    background: lightblue;
+}

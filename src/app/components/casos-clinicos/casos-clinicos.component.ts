@@ -15,6 +15,8 @@ export class CasosClinicosComponent implements OnInit {
   form: any;
 
   nome: string;
+  altura: string;
+  peso: string;
   sexo: string;
   cor: string;
   profissao: string;

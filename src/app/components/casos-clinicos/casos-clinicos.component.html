@@ -1,6 +1,8 @@
 <mat-card>
 
-    <mat-toolbar class="banner" color="secondary"> Casos Clinicos </mat-toolbar>
+    <mat-toolbar class="banner" color="secondary">
+        <h1>CASOS CLÍNICOS</h1>
+    </mat-toolbar>
 
     <mat-card-content>
         <form [formGroup]="form" class="full-width">
@@ -10,27 +12,27 @@
                 <input class="inputName" type="text" id="nome" name="nome" [(ngModel)]="nome">
             </mat-form-field>
 
+            <mat-form-field class="idade">
+                <label for="idade">Idade:</label>
+                <input class="inputIdade" type="text" id="idade" name="idade" [(ngModel)]="idade">
+            </mat-form-field>
+
             <mat-form-field class="altura">
                 <label for="altura">Altura:</label>
                 <input class="inputAltura" type="text" id="altura" name="altura" [(ngModel)]="altura">
             </mat-form-field>
 
             <mat-form-field class="peso">
-                <label for="peso">Peso:</label>
-                <input class="inputPeso" type="text" id="peso" name="peso" [(ngModel)]="peso">
-            </mat-form-field>
-
-            <mat-form-field class="peso">
-                <label for="peso">Peso:</label>
-                <input class="inputPeso" type="text" id="peso" name="peso" [(ngModel)]="peso">
+                <label for="altura">Peso:</label>
+                <input class="inputPeso" type="text" id="altura" name="altura" [(ngModel)]="peso">
             </mat-form-field>
 
             <mat-form-field class="sex">
                 <label for="sexo">Sexo:</label>
                 <input class="inputSexo" type="text" id="sexo" name="sexo" [(ngModel)]="sexo">
             </mat-form-field>
-
-
+        </form>
+        <form [formGroup]="form" class="full-width">
             <mat-form-field class="cor">
                 <label for="cor">Cor:</label>
                 <input class="inputCor" type="text" id="cor" name="cor" [(ngModel)]="cor">
@@ -60,10 +62,9 @@
                 <input class="inputResidente" type="text" id="residente" name="residente" [(ngModel)]="residente">
             </mat-form-field>
 
-
-            <button type="submit" class="envio">Enviar</button>
-
+            <button type="submit" class="envio">ENVIAR</button>
         </form>
+
 
     </mat-card-content>
 </mat-card>
@@ -136,3 +137,4 @@
 
     </mat-card-content>
 </mat-card>
+

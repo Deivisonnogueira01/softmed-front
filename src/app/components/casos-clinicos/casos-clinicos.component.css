@@ -1,108 +1,18 @@
-mat-card {
-    width: 100%;
-    height: auto;
-    align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
-.banner {
-    /*Casos Clinicos */
-   
-}
-
-.full-width {
-    width: 100%;
-    height: 100%;
-}
-
-.nome {
-    width: 50%;
-    height: 80%;
-}
-
-.inputName{
-    align-items: center;
-    height: 50%;
-}
-
-.altura{
-    align-items: center;
-    height: 50%;
-}
-
-.inputAltura {
-  align-items: center;
-  height: 50%;
-}
-
-.peso {
-    width: 50%;
-    height: 80%;
-}
-
-.inputPeso{
-    align-items: center;
-    height: 50%;
-}
-
-.sex {
-    width: 50%;
-    height: 50%;
-}
-
-.cor {
-    align-items: center;
-    height: 50%;
-}
-
-.inputCor {
-    width: 50%;
-    height: 50%;
-}
-
-.profissao {
-    width: 50%;
-    height: 50%;
-}
-
-.inputProfissao{
-    align-items: center;
-    height: 50%;
-}
-
-.religiao {
-    width: 50%;
-    height: 50%;
-}
-
-.inputReligiao{
-    width: 50%;
-    height: 50%;
-}
-
-.natural {
-    width: 50%;
-    height: 50%;
-}
-
-.inputNatural{
-    width: 50%;
-    height: 50%;
-}
-
-.residente {
-    width: 50%;
-    height: 50%;
-}
-
-.inputResidente{
-    width: 50%;
-    height: 50%;
+html {
+    font-family: 'Oswald', sans-serif;
 }
 
 .envio {
-    background-color: aqua;
-    background-size: 40%;
-    background-position: 20%;
+    color: white;
+    font-style: oblique;
+    width: 45%;
+    margin: auto;
+    background-color: #03C9FA;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 10px 300px;
 }
 
  /* Segunda Div */
@@ -135,6 +45,28 @@ mat-card {
     font-size: 2.5rem;
 }
 
+mat-toolbar {
+    text-align: center;
+}
+
+mat-card-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+mat-form-field {
+    margin: 10px;
+    font-size: 1rem;
+}
+
+mat-form-field input {
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 10px 0px
+}
 
 mat-grid-tile {
     background: lightblue;

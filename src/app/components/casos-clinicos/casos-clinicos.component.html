@@ -27,11 +27,7 @@
 
             <mat-form-field class="sex">
                 <label for="sexo">Sexo:</label>
-                <select id="sexo" name="sexo" [(ngModel)]="sexo">
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
-                </select>
+                <input class="inputSexo" type="text" id="sexo" name="sexo" [(ngModel)]="sexo">
             </mat-form-field>
 
 
@@ -65,19 +61,78 @@
             </mat-form-field>
 
 
-
             <button type="submit" class="envio">Enviar</button>
+
         </form>
 
     </mat-card-content>
-    
+</mat-card>
+
+<mat-card>
+    <mat-card-content>
+
+        <a routerLink="">
+            <i class="emogi-green-1">💚</i>
+            QP
+        </a>
+
+        <a routerLink="">
+            <i class="emogi-white-1">🤍</i>
+            HDA
+        </a>
+
+        <a routerLink="">
+            <i class="emogi-green-2">💚</i>
+            IDA
+        </a>
+
+        <a routerLink="">
+            <i class="emogi-white-2">🤍</i>
+            HPP
+        </a>
+
+        <a routerLink="">
+            <i class="emogi-green-3">💚</i>
+            HF
+        </a>
+
+        <a routerLink="">
+            <i class="emogi-white-3">🤍</i>
+            HS
+        </a>
+
+        <a routerLink="">
+            <i class="emogi-green-3">💚</i>
+            EXAME FISICO
+        </a>
+
+    </mat-card-content>
 </mat-card>
 
 
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-  </mat-grid-list>
+<mat-card>
+    <mat-card-content>
 
+        <a mat-list-item routerLink="">
+            <i class="material-icons">airline_seat_individual_suite</i>
+            Hipótese Diagnóstica
+        </a>
+
+        <a mat-list-item routerLink="">
+            <i class="material-icons">people</i>
+            Conduta
+        </a>
+
+        <a mat-list-item routerLink="">
+            <i class="material-icons">poll</i>
+            Resultado Exames
+        </a>
+
+        <a mat-list-item routerLink="">
+            <i class="material-icons">equalizer</i>
+            Evolução
+        </a>
+
+
+    </mat-card-content>
+</mat-card>

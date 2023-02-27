@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-casos-clinicos',
-  templateUrl: './casos-clinicos.component.html',
-  styleUrls: ['./casos-clinicos.component.css']
+  selector: "app-casos-clinicos",
+  templateUrl: "./casos-clinicos.component.html",
+  styleUrls: ["./casos-clinicos.component.css"],
 })
 export class CasosClinicosComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   form: any;
 
   nome: string;
+  idade: string;
   altura: string;
   peso: string;
   sexo: string;
@@ -23,7 +22,4 @@ export class CasosClinicosComponent implements OnInit {
   religiao: string;
   natural: string;
   residente: string;
-
-
-
 }

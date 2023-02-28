@@ -2,6 +2,7 @@
 
 html {
     font-family: 'Oswald', sans-serif;
+    background-color: #00FFEE;
 }
 
 .envio {
@@ -9,7 +10,7 @@ html {
     font-style: oblique;
     width: 45%;
     margin: auto;
-    background-color: #03C9FA;
+    background-color: greenyellow;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 15px;
     padding: 10px 300px;
@@ -68,15 +69,49 @@ mat-form-field input {
     padding: 10px 0px
 }
 
-mat-grid-tile {
-    background: lightblue;
+mat-card{
+    background-color: #03C9FA;
 }
 
-mat-card {
-    background: #00FFEE;
+.mat-2{
+    background-color: #03C9FA;
+}
+
+.card-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.icones-coracoes a{
+    margin: 20px 20px 0 50px;
+}
+
+.icones-coracoes i{
+   font-size: 50px;
+}
+
+.icones-coracoes{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.icones-finais i {
+    font-size: 100px;
+    
+}
+
+.icones-finais{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
    
 }
 
-.mat-focus-indicator{
-    height: 50vh;
+.icones-finais a {
+  margin: 250px 50px 0 50px;
 }
+

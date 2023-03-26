@@ -1,6 +1,7 @@
 
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { CasoClinicosListComponent } from "./components/caso-clinicos-list/caso-clinicos-list.component";
 import { CasosClinicosComponent } from "./components/casos-clinicos/casos-clinicos.component";
 import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
@@ -13,8 +14,11 @@ const routes: Routes = [
   {
     path: '', component: NavComponent, children: [
       { path: "home", component: HomeComponent },
-      { path: "casos-clinicos-form", component: CasosClinicosComponent}
+      { path: "casos-clinicos-form", component: CasosClinicosComponent},
+
+      {path: "caso-clinicos-list", component: CasoClinicosListComponent}
     ]
+    
   }
 ];
 

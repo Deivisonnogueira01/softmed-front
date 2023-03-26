@@ -28,6 +28,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import {MatGridListModule} from '@angular/material/grid-list';
+import { CasoClinicosListComponent } from './components/caso-clinicos-list/caso-clinicos-list.component';
 //import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
@@ -38,6 +39,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HeaderComponent,
     LoginComponent,
     CasosClinicosComponent,
+    CasoClinicosListComponent,
   //  QuizComponent,
   ],
   

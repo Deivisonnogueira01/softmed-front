@@ -1,9 +1,13 @@
+import { Injectable } from '@angular/core';
 import { API_CONFIG } from './../../config/api.config';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { CasoClinico } from '../model/caso-clinico';
 
 
+@Injectable({
+    providedIn: 'root'
+})
 export class CasoClinicoService {
 
     constructor(private http: HttpClient){
@@ -15,7 +19,7 @@ export class CasoClinicoService {
     }
 
     findAll(): Observable<CasoClinico[]> {
-        return this.http.get<CasoClinico[]>(`${API_CONFIG.baseUrl}/casos-clinicos/`)
+        return this.http.get<CasoClinico[]>(`${API_CONFIG.baseUrl}/casos-clinicos`)
     }
 
 }

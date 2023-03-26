@@ -25,7 +25,7 @@ export class CasoClinicosListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.service.findAll();
+    this.findAll()
   }
 
   findAll(): void{

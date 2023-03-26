@@ -16,7 +16,9 @@ const routes: Routes = [
       { path: "home", component: HomeComponent },
       { path: "casos-clinicos-form", component: CasosClinicosComponent},
 
-      {path: "caso-clinicos-list", component: CasoClinicosListComponent}
+      {path: "caso-clinicos-list", component: CasoClinicosListComponent},
+
+      {path: "caso-clinicos-list/chamar", component:CasosClinicosComponent}
     ]
     
   }

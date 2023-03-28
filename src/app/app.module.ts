@@ -29,6 +29,7 @@ import { NavComponent } from "./components/nav/nav.component";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import {MatGridListModule} from '@angular/material/grid-list';
 import { CasoClinicosListComponent } from './components/caso-clinicos-list/caso-clinicos-list.component';
+import { CasosClinicosViewComponent } from './components/casos-clinicos-view/casos-clinicos-view.component';
 //import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
@@ -40,6 +41,7 @@ import { CasoClinicosListComponent } from './components/caso-clinicos-list/caso-
     LoginComponent,
     CasosClinicosComponent,
     CasoClinicosListComponent,
+    CasosClinicosViewComponent,
   //  QuizComponent,
   ],
   

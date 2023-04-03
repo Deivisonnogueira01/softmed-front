@@ -14,22 +14,21 @@ import { AppComponent } from "./app.component";
 import { LoginComponent } from "./components/login/login.component";
 
 import { DragDropModule } from "@angular/cdk/drag-drop";
+import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from "@angular/material/input";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatTabsModule } from "@angular/material/tabs";
+import { MatToolbarModule } from "@angular/material/toolbar";
 import { ToastrModule } from "ngx-toastr";
-
-import { HttpClientModule } from "@angular/common/http";
+import { CasoClinicosListComponent } from './components/caso-clinicos-list/caso-clinicos-list.component';
+import { CasosClinicosViewComponent } from './components/casos-clinicos-view/casos-clinicos-view.component';
 import { CasosClinicosComponent } from "./components/casos-clinicos/casos-clinicos.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { HomeComponent } from "./components/home/home.component";
 import { NavComponent } from "./components/nav/nav.component";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import {MatGridListModule} from '@angular/material/grid-list';
-import { CasoClinicosListComponent } from './components/caso-clinicos-list/caso-clinicos-list.component';
-import { CasosClinicosViewComponent } from './components/casos-clinicos-view/casos-clinicos-view.component';
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 //import { QuizComponent } from './quiz/quiz.component';
 
@@ -67,13 +66,11 @@ import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
     DragDropModule,
     MatToolbarModule,
     MatGridListModule,
-
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
-      progressBar: true,
+      progressBar: true
     }),
-    // NgxMaskModule.forRoot()
   ],
 
   providers: [AuthInterceptorProvider],

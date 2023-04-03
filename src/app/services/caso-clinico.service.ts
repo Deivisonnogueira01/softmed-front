@@ -19,7 +19,7 @@ export class CasoClinicoService {
     }
 
     findAll(): Observable<CasoClinico[]> {
-        return this.http.get<CasoClinico[]>(`${API_CONFIG.baseUrl}/casos-clinicos`,  { withCredentials: true })
+        return this.http.get<CasoClinico[]>(`${API_CONFIG.baseUrl}/casos-clinicos`,);
     }
 
 }

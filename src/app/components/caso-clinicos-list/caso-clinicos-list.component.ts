@@ -12,7 +12,6 @@ import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
 export class CasoClinicosListComponent implements OnInit {
 
   ELEMENT_DATA: CasoClinico[] = []
-  FILTERED_DATA: CasoClinico[] = []
 
 
   displayedColumns: string[] = ['casoClinicoId', 'numero', 'nomePaciente',  'especialidades', 'acoes'];
@@ -29,11 +28,10 @@ export class CasoClinicosListComponent implements OnInit {
   }
 
   findAll(): void{
-    this.service.findAll().subscribe(resposta =>
-      {
+    this.service.findAll().subscribe(resposta => {
         this.ELEMENT_DATA = resposta;
         this.dataSource = new MatTableDataSource<CasoClinico>(resposta);
-        this,this.dataSource.paginator = this.paginator;
+        this.dataSource.paginator = this.paginator;
       })
   }
 

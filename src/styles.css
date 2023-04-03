@@ -1,22 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+
 @import '../node_modules/ngx-toastr/toastr.css';
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: 'Oswald', sans-serif;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: 'Oswald', sans-serif;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

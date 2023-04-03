@@ -12,28 +12,21 @@ import { AuthGuard } from "./auth/auth.guard";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
-
   {
-    path: '', component: NavComponent,  canActivate: [AuthGuard], children: [
+    path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: "home", component: HomeComponent },
-      
-      { path: "casos-clinicos-form", component: CasosClinicosComponent},
 
-      {path: "caso-clinicos-list", component: CasoClinicosListComponent},
-
-      {path: "caso-clinicos-list/chamar", component:CasosClinicosComponent},
-      
-      {path: "caso-clinicos-list/view", component:CasosClinicosViewComponent},
-
-   //   {path: "caso-clinicos-list-view", component:CasosClinicosViewComponent}
-
+      { path: "casos-clinicos-form", component: CasosClinicosComponent },
+      { path: "caso-clinicos-list", component: CasoClinicosListComponent },
+      { path: "caso-clinicos-list/chamar", component: CasosClinicosComponent },
+      { path: "caso-clinicos-list/view", component: CasosClinicosViewComponent },
     ]
-    
   }
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

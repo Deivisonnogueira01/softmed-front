@@ -7,14 +7,16 @@ import { CasosClinicosComponent } from "./components/casos-clinicos/casos-clinic
 import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { NavComponent } from "./components/nav/nav.component";
+import { AuthGuard } from "./auth/auth.guard";
 
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
 
   {
-    path: '', component: NavComponent, children: [
+    path: '', component: NavComponent,  canActivate: [AuthGuard], children: [
       { path: "home", component: HomeComponent },
+      
       { path: "casos-clinicos-form", component: CasosClinicosComponent},
 
       {path: "caso-clinicos-list", component: CasoClinicosListComponent},

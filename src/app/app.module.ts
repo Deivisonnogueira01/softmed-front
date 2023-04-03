@@ -30,6 +30,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import {MatGridListModule} from '@angular/material/grid-list';
 import { CasoClinicosListComponent } from './components/caso-clinicos-list/caso-clinicos-list.component';
 import { CasosClinicosViewComponent } from './components/casos-clinicos-view/casos-clinicos-view.component';
+import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 //import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
@@ -72,9 +73,10 @@ import { CasosClinicosViewComponent } from './components/casos-clinicos-view/cas
       closeButton: true,
       progressBar: true,
     }),
+    // NgxMaskModule.forRoot()
   ],
 
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -15,11 +15,11 @@ export class CasosClinicosViewComponent implements OnInit {
 
   casoClinico: CasoClinico = {
 
-    casoClinicoId: '',
+    casoClinicoId: 0,
     numero: 0,
     nomePaciente: '',
-    idadePaciente: '',
-    alturaPaciente: '',
+    idadePaciente: 0,
+    alturaPaciente: 0,
     pesoPaciente: 0,
     sexoPaciente: '',
     corPaciente: '',
@@ -68,7 +68,7 @@ export class CasosClinicosViewComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.casoClinico.casoClinicoId = this.route.snapshot.paramMap.get('casoClinicoId')
+    this.casoClinico.casoClinicoId = this.route.snapshot.paramMap.get("casoClinicoId")
     this.findById();
   }
 

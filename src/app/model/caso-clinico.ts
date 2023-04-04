@@ -8,9 +8,9 @@ export class CasoClinico {
 
     nomePaciente: string;
 
-    idadePaciente: string;
+    idadePaciente: number;
 
-    alturaPaciente: string;
+    alturaPaciente: number;
 
     pesoPaciente: number;
 

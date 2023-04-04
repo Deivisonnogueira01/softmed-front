@@ -17,9 +17,10 @@ const routes: Routes = [
       { path: "home", component: HomeComponent },
 
       { path: "casos-clinicos-form", component: CasosClinicosComponent },
-      { path: "caso-clinicos-list", component: CasoClinicosListComponent },
-      { path: "caso-clinicos-list/chamar", component: CasosClinicosComponent },
-      { path: "caso-clinicos-list/view", component: CasosClinicosViewComponent },
+      { path: "casos-clinicos", component: CasoClinicosListComponent },
+      { path: "casos-clinicos/chamar", component: CasosClinicosComponent },
+
+      { path: "casos-clinicos/view:casoClinicoId", component: CasosClinicosViewComponent },
     ]
   }
 ];

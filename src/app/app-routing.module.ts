@@ -16,11 +16,8 @@ const routes: Routes = [
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: "home", component: HomeComponent },
 
-      { path: "casos-clinicos-form", component: CasosClinicosComponent },
       { path: "casos-clinicos", component: CasoClinicosListComponent },
-      { path: "casos-clinicos/chamar", component: CasosClinicosComponent },
-
-      { path: "casos-clinicos/view:casoClinicoId", component: CasosClinicosViewComponent },
+      { path: "casos-clinicos/view/:casoClinicoId", component: CasosClinicosViewComponent },
     ]
   }
 ];

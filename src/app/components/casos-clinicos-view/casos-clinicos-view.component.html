@@ -121,6 +121,7 @@
         name="historiaDoencaAtual"
         [(ngModel)]="casoClinico.historiaDoencaAtual"
         class="widgets"
+        [formControl]="historiaDoencaAtual"
         matInput
         placeholder="..."
       ></textarea>
@@ -132,6 +133,7 @@
         name="queixaPrincipal"
         [(ngModel)]="casoClinico.queixaPrincipal"
         class="widgets"
+        [formControl]="queixaPrincipal"
         matInput
         placeholder="..."
       ></textarea>
@@ -142,6 +144,7 @@
       <textarea
         name="interrogatorioDiversosAparelhos" 
         [(ngModel)]="casoClinico.interrogatorioDiversosAparelhos"
+        [formControl]="interrogatorioDiversosAparelhos"
         class="widgets"
         matInput
         placeholder="..."
@@ -153,6 +156,7 @@
       <textarea
         name="historiaPatologicaPregressa"
         [(ngModel)]="casoClinico.historiaPatologicaPregressa"
+        [formControl]="historiaPatologicaPregressa"
         class="widgets"
         matInput
         placeholder="..."
@@ -164,6 +168,7 @@
       <textarea
         name="historiaFamiliar"
         [(ngModel)]="casoClinico.historiaFamiliar"
+        [formControl]="historiaFamiliar"
         class="widgets"
         matInput
         placeholder="..."
@@ -175,6 +180,7 @@
       <textarea
         name="historiaPsicossocial"
         [(ngModel)]="casoClinico.historiaPsicossocial"
+        [formControl]="historiaPsicossocial"
         class="widgets"
         matInput
         placeholder="..."

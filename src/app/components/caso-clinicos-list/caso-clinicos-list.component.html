@@ -15,6 +15,47 @@
     />
   </mat-form-field>
 
+  
+
+  <!--<mat-form-field appearance="fill">
+    <mat-label>Favorite food</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Selected food: {{selectedValue}} </p>
+  <h4>native html select</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite car</mat-label>
+    <select matNativeControl [(ngModel)]="selectedCar" name="car">
+      <option value="" selected></option>
+      <option *ngFor="let car of cars" [value]="car.value">
+        {{car.viewValue}}
+      </option>
+    </select>
+  </mat-form-field> -->
+
+
+
+
+  <div class="especialidades">
+    <mat-form-field class="full-width" appearance="outline">
+       <mat-label>Selecione Uma Especialidade</mat-label>
+       <mat-select >
+        <mat-option value="CLINICA_MEDICA">CLINICA MEDICA</mat-option>
+        <mat-option value="PEDIATRIA">PEDIATRIA</mat-option>
+        <mat-option value="OBESIDADE">OBESIDADE</mat-option>
+       </mat-select>
+
+  
+     </mat-form-field>
+  </div>
+
+
+
+
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
 
@@ -33,20 +74,17 @@
         <td mat-cell *matCellDef="let element">{{ element.nomePaciente }}</td>
       </ng-container>
 
-      <ng-container matColumnDef="especialidades">
+      <ng-container matColumnDef="tipoEspecialidade">
         <th mat-header-cell *matHeaderCellDef>Especialidade</th>
-        <td mat-cell *matCellDef="let element">{{ element.especialidades }}</td>
+        <td mat-cell *matCellDef="let element">{{ element.tipoEspecialidade }}</td>
       </ng-container>
 
 
       <ng-container matColumnDef="acoes">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let element">
-          <a routerLink="">
-            <i class="material-icons edit">edit</i>
-          </a>
-          <a routerLink="">
-            <i class="material-icons delete">visibility</i>
+          <a routerLink="view">
+            <i class="material-icons create">visibility</i>
           </a>
         </td>
       </ng-container>

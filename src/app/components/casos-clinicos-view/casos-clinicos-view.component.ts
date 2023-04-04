@@ -1,7 +1,7 @@
 import { Form, Validators } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
@@ -33,7 +33,7 @@ export class CasosClinicosViewComponent implements OnInit {
     historiaPatologicaPregressa: '',
     historiaFamiliar: '',
     historiaPsicossocial: '',
-    especialidades: []
+    tipoEspecialidade: ''
 
   }
 
@@ -57,35 +57,31 @@ export class CasosClinicosViewComponent implements OnInit {
   historiaPatologicaPregressa: FormControl = new FormControl(null);
   historiaFamiliar: FormControl = new FormControl(null);
   historiaPsicossocial: FormControl = new FormControl(null);
-  especialidades: []
+  tipoEspecialidade: FormControl = new FormControl(null);
 
 
   constructor(
     private service: CasoClinicoService,
     private toastService: ToastrService,
     private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    // chamar algum caso 
+    this.casoClinico.casoClinicoId = this.route.snapshot.paramMap.get('casoClinicoId')
+    this.findById();
+  }
+
+  findById(): void {
+    this.service.findById(this.casoClinico.casoClinicoId).subscribe(resposta => {
+      this.casoClinico = resposta;
+    }, ex => {
+      this.toastService.error(ex.error.error);
+    })
   }
 
   finalizar(): void {
     this.toastService.success('Caso Clinico Finalizado Com Sucesso');
     this.router.navigate(['caso-clinicos-list']);
-    //home
   }
-
-
-
-  /*
-  findAllTecnicos(): void {
-    this.tecnicoService.findAll().subscribe(resposta => {
-      this.tecnicos = resposta;
-    })
-  }*/
-
-
-
-
 }

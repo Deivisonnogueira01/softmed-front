@@ -1,5 +1,4 @@
 
-
 export class CasoClinico {
 
     casoClinicoId?: any;

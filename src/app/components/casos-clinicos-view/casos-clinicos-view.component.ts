@@ -82,6 +82,6 @@ export class CasosClinicosViewComponent implements OnInit {
 
   finalizar(): void {
     this.toastService.success('Caso Clinico Finalizado Com Sucesso');
-    this.router.navigate(['home']);
+    this.router.navigate(['hipotese-diagnostica']);
   }
 }

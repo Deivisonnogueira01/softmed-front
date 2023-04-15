@@ -8,6 +8,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { AuthGuard } from "./auth/auth.guard";
+import { HipoteseDiagnosticaComponent } from "./components/hipotese-diagnostica/hipotese-diagnostica.component";
 
 
 const routes: Routes = [
@@ -18,6 +19,8 @@ const routes: Routes = [
 
       { path: "casos-clinicos", component: CasoClinicosListComponent },
       { path: "casos-clinicos/view/:casoClinicoId", component: CasosClinicosViewComponent },
+
+      {path: "hipotese-diagnostica", component: HipoteseDiagnosticaComponent}
     ]
   }
 ];

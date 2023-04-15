@@ -31,6 +31,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { HomeComponent } from "./components/home/home.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
+import { HipoteseDiagnosticaComponent } from './components/hipotese-diagnostica/hipotese-diagnostica.component';
 //import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
@@ -43,6 +44,7 @@ import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
     CasosClinicosComponent,
     CasoClinicosListComponent,
     CasosClinicosViewComponent,
+    HipoteseDiagnosticaComponent,
   //  QuizComponent,
   ],
   

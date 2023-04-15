@@ -1,17 +1,17 @@
-import { Form, Validators } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-casos-clinicos-view',
-  templateUrl: './casos-clinicos-view.component.html',
-  styleUrls: ['./casos-clinicos-view.component.css']
+  selector: 'app-casos-clinicos-create',
+  templateUrl: './casos-clinicos-create.component.html',
+  styleUrls: ['./casos-clinicos-create.component.css']
 })
-export class CasosClinicosViewComponent implements OnInit {
+export class CasosClinicosCreateComponent implements OnInit {
+
 
   casoClinico: CasoClinico = {
 
@@ -37,8 +37,6 @@ export class CasosClinicosViewComponent implements OnInit {
 
   }
 
-  
-  casoClinicoId: FormControl = new FormControl(null);
   numero: FormControl = new FormControl(null);
   nomePaciente: FormControl = new FormControl(null);
   idadePaciente: FormControl = new FormControl(null);
@@ -58,29 +56,33 @@ export class CasosClinicosViewComponent implements OnInit {
   historiaPsicossocial: FormControl = new FormControl(null);
   tipoEspecialidade: FormControl = new FormControl(null);
 
-
   constructor(
     private service: CasoClinicoService,
-    private toastService: ToastrService,
-    private router: Router,
-    private route: ActivatedRoute
+    private toast: ToastrService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.casoClinico.casoClinicoId = this.route.snapshot.paramMap.get("casoClinicoId")
-    this.findById();
   }
 
-  findById(): void {
-    this.service.findById(this.casoClinico.casoClinicoId).subscribe(resposta => {
-      this.casoClinico = resposta;
+  create(): void {
+    this.service.create(this.casoClinico).subscribe(() => {
+      this.toast.success('Caso Clinico cadastrado com sucesso', 'Cadastro');
+      this.router.navigate(['home'])
     }, ex => {
-      this.toastService.error(ex.error.error);
+      if(ex.error.errors) {
+        ex.error.errors.forEach(element => {
+          this.toast.error(element.message);
+        });
+      } else {
+        this.toast.error(ex.error.message);
+      }
     })
   }
 
-  finalizar(): void {
-    this.toastService.success('Caso Clinico Finalizado Com Sucesso');
-    this.router.navigate(['hipotese-diagnostica']);
+  validaCampos(): boolean {
+    return this.nomePaciente.valid && this.queixaPrincipal.valid
+     && this.tipoEspecialidade.valid && this.numero.valid
   }
+
 }

@@ -32,6 +32,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 import { HipoteseDiagnosticaComponent } from './components/hipotese-diagnostica/hipotese-diagnostica.component';
+import { CasosClinicosCreateComponent } from './components/casos-clinicos-create/casos-clinicos-create.component';
 //import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { HipoteseDiagnosticaComponent } from './components/hipotese-diagnostica/
     CasoClinicosListComponent,
     CasosClinicosViewComponent,
     HipoteseDiagnosticaComponent,
+    CasosClinicosCreateComponent,
   //  QuizComponent,
   ],
   

@@ -15,48 +15,22 @@
     />
   </mat-form-field>
 
-  
-
-  <!--<mat-form-field appearance="fill">
-    <mat-label>Favorite food</mat-label>
-    <mat-select [(ngModel)]="selectedValue" name="food">
-      <mat-option *ngFor="let food of foods" [value]="food.value">
-        {{food.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  <p> Selected food: {{selectedValue}} </p>
-  <h4>native html select</h4>
-  <mat-form-field appearance="fill">
-    <mat-label>Favorite car</mat-label>
-    <select matNativeControl [(ngModel)]="selectedCar" name="car">
-      <option value="" selected></option>
-      <option *ngFor="let car of cars" [value]="car.value">
-        {{car.viewValue}}
-      </option>
-    </select>
-  </mat-form-field> -->
-
-
-
-
   <div class="especialidades">
     <mat-form-field class="full-width" appearance="outline">
-       <mat-label>Selecione Uma Especialidade</mat-label>
-       <mat-select >
-        <mat-option value="CLINICA_MEDICA">CLINICA MEDICA</mat-option>
-        <mat-option value="PEDIATRIA">PEDIATRIA</mat-option>
-        <mat-option value="NEUROLOGIA">NEUROLOGIA</mat-option>
-       </mat-select>
-
-  
-     </mat-form-field>
+      <mat-label>Selecione Uma Especialidade</mat-label>
+      <mat-select>
+        <mat-option (click)="findByEspecialidade('CLINICA_MEDICA')" value="CLINICA_MEDICA">CLINICA MEDICA</mat-option>
+        <mat-option (click)="findByEspecialidade('CIRURGIA')" value="CIRURGIA">CIRURGIA</mat-option>
+        <mat-option (click)="findByEspecialidade('GINECOLOGIA')" value="GINECOLOGIA">GINECOLOGIA</mat-option>
+        <mat-option (click)="findByEspecialidade('MEDICINA_DA_FAMILIA')" value="MEDICINA_DA_FAMILIA">MEDICINA DA FAMILIA</mat-option>
+        <mat-option (click)="findByEspecialidade('OBSTETRICIA')" value="OBSTETRICIA">OBSTETRICIA</mat-option>
+        <mat-option (click)="findByEspecialidade('PEDIATRIA')" value="PEDIATRIA">PEDIATRIA</mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
-
 
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
-
       <ng-container matColumnDef="casoClinicoId">
         <th mat-header-cell *matHeaderCellDef>ID</th>
         <td mat-cell *matCellDef="let element">{{ element.casoClinicoId }}</td>
@@ -69,9 +43,10 @@
 
       <ng-container matColumnDef="tipoEspecialidade">
         <th mat-header-cell *matHeaderCellDef>Especialidade</th>
-        <td mat-cell *matCellDef="let element">{{ element.tipoEspecialidade }}</td>
+        <td mat-cell *matCellDef="let element">
+          {{ element.tipoEspecialidade }}
+        </td>
       </ng-container>
-
 
       <ng-container matColumnDef="acoes">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
@@ -91,5 +66,4 @@
       showFirstLastButtons
     ></mat-paginator>
   </div>
-
 </div>

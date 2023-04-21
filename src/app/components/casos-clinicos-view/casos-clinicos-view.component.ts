@@ -33,7 +33,8 @@ export class CasosClinicosViewComponent implements OnInit {
     historiaPatologicaPregressa: '',
     historiaFamiliar: '',
     historiaPsicossocial: '',
-    tipoEspecialidade: ''
+    tipoEspecialidade: '',
+    exameFisico: ''
 
   }
 
@@ -57,6 +58,7 @@ export class CasosClinicosViewComponent implements OnInit {
   historiaFamiliar: FormControl = new FormControl(null);
   historiaPsicossocial: FormControl = new FormControl(null);
   tipoEspecialidade: FormControl = new FormControl(null);
+  exameFisico: FormControl = new FormControl(null);
 
 
   constructor(
@@ -79,8 +81,8 @@ export class CasosClinicosViewComponent implements OnInit {
     })
   }
 
+  //this.toastService.success('Caso Clinico Finalizado Com Sucesso');
   finalizar(): void {
-    this.toastService.success('Caso Clinico Finalizado Com Sucesso');
     this.router.navigate(['hipotese-diagnostica']);
   }
 }

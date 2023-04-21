@@ -69,7 +69,7 @@
       <mat-label>Religião Paciente</mat-label>
       <input
         [(ngModel)]="casoClinico.religiaoPaciente"
-        name="religiaoPaciente"
+        name="religiaoPaciente" 
         [formControl]="religiaoPaciente"
         matInput
       />
@@ -157,6 +157,17 @@
         [(ngModel)]="casoClinico.historiaPsicossocial"
         name="historiaPsicossocial"
         [formControl]="historiaPsicossocial"
+        class="widgets"
+        matInput
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="fullWidth" appearance="legacy">
+      <mat-label>Exame Fisico</mat-label>
+      <textarea
+        [(ngModel)]="casoClinico.exameFisico"
+        name="exameFisico"
+        [formControl]="exameFisico"
         class="widgets"
         matInput
       ></textarea>

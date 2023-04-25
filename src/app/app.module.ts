@@ -4,9 +4,9 @@ import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
+import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatTableModule } from "@angular/material/table";
-import {MatSelectModule} from '@angular/material/select';
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -25,14 +25,13 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { ToastrModule } from "ngx-toastr";
 import { CasoClinicosListComponent } from './components/caso-clinicos-list/caso-clinicos-list.component';
+import { CasosClinicosCreateComponent } from './components/casos-clinicos-create/casos-clinicos-create.component';
 import { CasosClinicosViewComponent } from './components/casos-clinicos-view/casos-clinicos-view.component';
-import { CasosClinicosComponent } from "./components/casos-clinicos/casos-clinicos.component";
 import { HeaderComponent } from "./components/header/header.component";
+import { HipoteseDiagnosticaComponent } from './components/hipotese-diagnostica/hipotese-diagnostica.component';
 import { HomeComponent } from "./components/home/home.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
-import { HipoteseDiagnosticaComponent } from './components/hipotese-diagnostica/hipotese-diagnostica.component';
-import { CasosClinicosCreateComponent } from './components/casos-clinicos-create/casos-clinicos-create.component';
 //import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
@@ -42,7 +41,6 @@ import { CasosClinicosCreateComponent } from './components/casos-clinicos-create
     HomeComponent,
     HeaderComponent,
     LoginComponent,
-    CasosClinicosComponent,
     CasoClinicosListComponent,
     CasosClinicosViewComponent,
     HipoteseDiagnosticaComponent,

@@ -34,7 +34,8 @@ export class CasosClinicosViewComponent implements OnInit {
     historiaFamiliar: '',
     historiaPsicossocial: '',
     tipoEspecialidade: '',
-    exameFisico: ''
+    exameFisico: '',
+    patologia:''
 
   }
 

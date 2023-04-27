@@ -36,7 +36,8 @@ export class CasoClinicosListComponent implements OnInit {
     historiaFamiliar: '',
     historiaPsicossocial: '',
     tipoEspecialidade: '',
-    exameFisico: ''
+    exameFisico: '',
+    patologia: ''
 
   }
 

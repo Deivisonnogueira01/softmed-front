@@ -34,7 +34,8 @@ export class CasosClinicosCreateComponent implements OnInit {
     historiaFamiliar: '',
     historiaPsicossocial: '',
     tipoEspecialidade: '',
-    exameFisico: ''
+    exameFisico: '',
+    patologia: '',
 
   }
 
@@ -57,6 +58,7 @@ export class CasosClinicosCreateComponent implements OnInit {
   historiaPsicossocial: FormControl = new FormControl(null);
   tipoEspecialidade: FormControl = new FormControl(null);
   exameFisico: FormControl = new FormControl(null);
+  patologia: FormControl = new FormControl(null);
 
   constructor(
     private service: CasoClinicoService,

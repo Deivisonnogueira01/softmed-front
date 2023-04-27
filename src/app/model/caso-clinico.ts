@@ -38,6 +38,8 @@ export class CasoClinico {
     historiaPsicossocial: string;
 
     tipoEspecialidade: any;
+
+    patologia: any;
       
     exameFisico: string;
 }

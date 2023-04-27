@@ -190,6 +190,21 @@
       </mat-select>
     </mat-form-field>
 
+    <mat-form-field class="fullWidth" appearance="legacy">
+      <mat-label>Patologia</mat-label>
+      <mat-select
+        [(ngModel)]="casoClinico.patologia"
+        name="patologia"
+        [formControl]="patologia"
+        required
+      >
+        <mat-option value="GOTA">GOTA</mat-option>
+        <mat-option value="MIASTENIA">MIASTENIA</mat-option>
+        <mat-option value="OBESIDADE">OBESIDADE</mat-option>
+        <mat-option value="TEP">TEP</mat-option>
+      </mat-select>
+    </mat-form-field>
+
     <button
       (click)="create()"
       [disabled]="!validaCampos()"

@@ -31,11 +31,7 @@
 
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
-      <ng-container matColumnDef="casoClinicoId">
-        <th mat-header-cell *matHeaderCellDef>ID</th>
-        <td mat-cell *matCellDef="let element">{{ element.casoClinicoId }}</td>
-      </ng-container>
-
+      
       <ng-container matColumnDef="numero">
         <th mat-header-cell *matHeaderCellDef>Número do Caso</th>
         <td mat-cell *matCellDef="let element">{{ element.numero }}</td>

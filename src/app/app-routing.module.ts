@@ -22,7 +22,7 @@ const routes: Routes = [
 
       {path: "hipotese-diagnostica", component: HipoteseDiagnosticaComponent},
 
-      {path: "create", component: CasosClinicosCreateComponent}
+      {path: "create", component: CasosClinicosCreateComponent, canActivate: [AuthGuard]}
     ]
   }
 ];

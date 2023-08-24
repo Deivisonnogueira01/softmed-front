@@ -41,7 +41,7 @@ export class CasoClinicosListComponent implements OnInit {
 
   }
 
-  displayedColumns: string[] = ['casoClinicoId', 'numero', 'tipoEspecialidade', 'acoes'];
+  displayedColumns: string[] = ['numero', 'tipoEspecialidade', 'acoes'];
   dataSource = new MatTableDataSource<CasoClinico>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

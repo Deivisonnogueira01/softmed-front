@@ -3,14 +3,14 @@
 
   <form class="form">
     
-    <mat-form-field class="full-width" appearance="outline">
+    <mat-form-field class="full-width" appearance="outline" readonly>
       <mat-label>Número do Caso</mat-label>
       <input
       [(ngModel)]="casoClinico.numero"
       name="numero"
       [formControl]="numero"
+      readonly
       matInput>
-    
     </mat-form-field>
 
     <mat-form-field class="full-width" appearance="outline">
@@ -19,6 +19,7 @@
       [(ngModel)]="casoClinico.nomePaciente"
       name="nomePaciente"
       [formControl]="nomePaciente"
+      readonly
       matInput>
     
     </mat-form-field>
@@ -29,6 +30,7 @@
       [(ngModel)]="casoClinico.alturaPaciente"
       name="alturaPaciente"
       [formControl]="alturaPaciente"
+      readonly
       matInput>
     
     </mat-form-field>
@@ -39,6 +41,7 @@
       [(ngModel)]="casoClinico.pesoPaciente"
       name="pesoPaciente"
       [formControl]="pesoPaciente"
+      readonly
       matInput>
     
     </mat-form-field>
@@ -49,6 +52,7 @@
       [(ngModel)]="casoClinico.sexoPaciente"
       name="sexoPaciente"
       [formControl]="sexoPaciente"
+      readonly
       matInput>
     
     </mat-form-field>
@@ -59,6 +63,7 @@
       [(ngModel)]="casoClinico.profissaoPaciente"
       name="profissaoPaciente"
       [formControl]="profissaoPaciente"
+      readonly
       matInput>
     
     </mat-form-field>
@@ -69,6 +74,7 @@
       [(ngModel)]="casoClinico.religiaoPaciente"
       name="religiaoPaciente"
       [formControl]="religiaoPaciente"
+      readonly
       matInput>
     
     </mat-form-field>
@@ -79,6 +85,7 @@
       [(ngModel)]="casoClinico.naturalPaciente"
       name="naturalPaciente"
       [formControl]="naturalPaciente"
+      readonly
       matInput>
     
     </mat-form-field>
@@ -89,6 +96,7 @@
       [(ngModel)]="casoClinico.residentePaciente"
       name="residentePaciente"
       [formControl]="residentePaciente"
+      readonly
       matInput>
     
     </mat-form-field>
@@ -103,8 +111,10 @@
         [(ngModel)]="casoClinico.historiaDoencaAtual"
         class="widgets"
         [formControl]="historiaDoencaAtual"
+        readonly
         matInput
         placeholder="..."
+        
       ></textarea>
     </mat-form-field>
 
@@ -115,6 +125,7 @@
         [(ngModel)]="casoClinico.queixaPrincipal"
         class="widgets"
         [formControl]="queixaPrincipal"
+        readonly
         matInput
         placeholder="..."
       ></textarea>
@@ -126,6 +137,7 @@
         name="interrogatorioDiversosAparelhos" 
         [(ngModel)]="casoClinico.interrogatorioDiversosAparelhos"
         [formControl]="interrogatorioDiversosAparelhos"
+        readonly
         class="widgets"
         matInput
         placeholder="..."
@@ -138,6 +150,7 @@
         name="historiaPatologicaPregressa"
         [(ngModel)]="casoClinico.historiaPatologicaPregressa"
         [formControl]="historiaPatologicaPregressa"
+        readonly
         class="widgets"
         matInput
         placeholder="..."
@@ -150,6 +163,7 @@
         name="historiaFamiliar"
         [(ngModel)]="casoClinico.historiaFamiliar"
         [formControl]="historiaFamiliar"
+        readonly
         class="widgets"
         matInput
         placeholder="..."
@@ -162,6 +176,7 @@
         name="historiaPsicossocial"
         [(ngModel)]="casoClinico.historiaPsicossocial"
         [formControl]="historiaPsicossocial"
+        readonly
         class="widgets"
         matInput
         placeholder="..."
@@ -174,6 +189,7 @@
         name="exameFisico"
         [(ngModel)]="casoClinico.exameFisico"
         [formControl]="exameFisico"
+        readonly
         class="widgets"
         matInput
         placeholder="..."

@@ -4,6 +4,7 @@ import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { Patologia } from 'src/app/enums/Patologia';
 
 @Component({
   selector: 'app-casos-clinicos-create',
@@ -58,11 +59,18 @@ export class CasosClinicosCreateComponent implements OnInit {
   tipoEspecialidade: FormControl = new FormControl(null);
   patologia: FormControl = new FormControl(null);
 
+  patologias: string [];
+  selectedPatologia: string;
+  
   constructor(
     private service: CasoClinicoService,
     private toast: ToastrService,
-    private router: Router
-  ) { }
+    private router: Router,
+    
+  ) {
+    const patologiaObj = new Patologia();
+    this.patologias = Object.values(patologiaObj)
+   }
 
   ngOnInit(): void {
   }

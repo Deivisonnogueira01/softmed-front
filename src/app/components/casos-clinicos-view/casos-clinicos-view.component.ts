@@ -34,7 +34,6 @@ export class CasosClinicosViewComponent implements OnInit {
     historiaFamiliar: '',
     historiaPsicossocial: '',
     tipoEspecialidade: '',
-    exameFisico: '',
     patologia:''
 
   }
@@ -59,7 +58,6 @@ export class CasosClinicosViewComponent implements OnInit {
   historiaFamiliar: FormControl = new FormControl(null);
   historiaPsicossocial: FormControl = new FormControl(null);
   tipoEspecialidade: FormControl = new FormControl(null);
-  exameFisico: FormControl = new FormControl(null);
 
 
   constructor(

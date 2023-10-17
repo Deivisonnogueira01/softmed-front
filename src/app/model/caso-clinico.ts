@@ -42,5 +42,4 @@ export class CasoClinico {
 
     patologia: any;
       
-    exameFisico: string;
 }

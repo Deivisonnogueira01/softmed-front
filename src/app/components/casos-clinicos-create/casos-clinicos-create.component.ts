@@ -1,10 +1,10 @@
-import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Patologia } from 'src/app/enums/Patologia';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
-import { ToastrService } from 'ngx-toastr';
-import { Router } from '@angular/router';
-import { Patologia } from 'src/app/enums/Patologia';
 
 @Component({
   selector: 'app-casos-clinicos-create',
@@ -61,7 +61,7 @@ export class CasosClinicosCreateComponent implements OnInit {
 
   patologias: string [];
   selectedPatologia: string;
-  
+
   constructor(
     private service: CasoClinicoService,
     private toast: ToastrService,

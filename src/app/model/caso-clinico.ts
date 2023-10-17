@@ -1,4 +1,3 @@
-import { Patologia } from "../enums/Patologia";
 
 export class CasoClinico {
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Patologia } from 'src/app/enums/Patologia';
+import { Patologia } from 'src/app/enums/patologia';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
 
@@ -59,20 +59,37 @@ export class CasosClinicosCreateComponent implements OnInit {
   tipoEspecialidade: FormControl = new FormControl(null);
   patologia: FormControl = new FormControl(null);
 
-  patologias: string [];
+  patologias: string[];
   selectedPatologia: string;
 
   constructor(
     private service: CasoClinicoService,
     private toast: ToastrService,
     private router: Router,
-    
+
   ) {
     const patologiaObj = new Patologia();
     this.patologias = Object.values(patologiaObj)
-   }
+  }
 
   ngOnInit(): void {
+  }
+
+  onInputChange(event: any): void {
+    const inputValue = event.target.value;
+    // Filtra caracteres não numéricos usando uma expressão regular
+    this.casoClinico.pesoPaciente = inputValue.replace(/[^0-9]/g, '');
+  }
+
+  onInputChangeAltura(event: any): void {
+    const inputValue = event.target.value;
+    this.casoClinico.alturaPaciente = inputValue.replace(/[^0-9]/g, '');
+  }
+
+  onInputChangeNumero(event: any): void {
+    const inputValue = event.target.value;
+    // Filtra caracteres não numéricos usando uma expressão regular
+    this.casoClinico.numero = inputValue.replace(/[^0-9]/g, '');
   }
 
   create(): void {
@@ -80,7 +97,7 @@ export class CasosClinicosCreateComponent implements OnInit {
       this.toast.success('Caso Clinico cadastrado com sucesso', 'Cadastro');
       this.router.navigate(['home'])
     }, ex => {
-      if(ex.error.errors) {
+      if (ex.error.errors) {
         ex.error.errors.forEach(element => {
           this.toast.error(element.message);
         });
@@ -91,8 +108,8 @@ export class CasosClinicosCreateComponent implements OnInit {
   }
 
   validaCampos(): boolean {
-    return this.nomePaciente.valid && this.queixaPrincipal.valid
-     && this.tipoEspecialidade.valid && this.numero.valid
+    return this.queixaPrincipal.valid
+      && this.tipoEspecialidade.valid && this.numero.valid
   }
 
 }

@@ -1,10 +1,12 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Patologia } from 'src/app/enums/patologia';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
+import { Especialidade } from './../../enums/especialidade';
 
 @Component({
   selector: 'app-caso-clinicos-list',
@@ -35,8 +37,9 @@ export class CasoClinicosListComponent implements OnInit {
     historiaPatologicaPregressa: '',
     historiaFamiliar: '',
     historiaPsicossocial: '',
-    tipoEspecialidade: '',
-    patologia: ''
+    especialidade: Especialidade.OBSTETRICIA,
+    tipoEspecialidade: Especialidade.OBSTETRICIA,
+    patologia: Patologia.ACIDOSE
 
   }
 

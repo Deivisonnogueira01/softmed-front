@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Especialidade } from 'src/app/enums/especialidade';
 import { Patologia } from 'src/app/enums/patologia';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
@@ -34,8 +35,9 @@ export class CasosClinicosCreateComponent implements OnInit {
     historiaPatologicaPregressa: '',
     historiaFamiliar: '',
     historiaPsicossocial: '',
-    tipoEspecialidade: '',
-    patologia: '',
+    especialidade: Especialidade.CLINICA_MEDICA,
+    tipoEspecialidade: Especialidade.CLINICA_MEDICA,
+    patologia: Patologia.ACIDOSE,
 
   }
 
@@ -59,8 +61,11 @@ export class CasosClinicosCreateComponent implements OnInit {
   tipoEspecialidade: FormControl = new FormControl(null);
   patologia: FormControl = new FormControl(null);
 
-  patologias: string[];
-  selectedPatologia: string;
+  especialidades: string[] = Object.values(Especialidade);
+  selectedEspecialidade: any;
+
+  patologias: string[] = Object.values(Patologia);
+  selectedPatologia: any;
 
   constructor(
     private service: CasoClinicoService,
@@ -68,8 +73,7 @@ export class CasosClinicosCreateComponent implements OnInit {
     private router: Router,
 
   ) {
-    const patologiaObj = new Patologia();
-    this.patologias = Object.values(patologiaObj)
+
   }
 
   ngOnInit(): void {
@@ -92,6 +96,9 @@ export class CasosClinicosCreateComponent implements OnInit {
   }
 
   create(): void {
+    this.casoClinico.especialidade = this.selectedEspecialidade;
+    this.casoClinico.tipoEspecialidade = this.selectedEspecialidade;
+    this.casoClinico.patologia = this.selectedPatologia;
     this.service.create(this.casoClinico).subscribe(() => {
       this.toast.success('Caso Clinico cadastrado com sucesso', 'Cadastro');
       this.router.navigate(['home'])

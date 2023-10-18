@@ -1,3 +1,5 @@
+import { Especialidade } from "../enums/especialidade";
+import { Patologia } from "../enums/patologia";
 
 export class CasoClinico {
 
@@ -37,8 +39,10 @@ export class CasoClinico {
 
     historiaPsicossocial: string;
 
-    tipoEspecialidade: any;
+    tipoEspecialidade: Especialidade;
 
-    patologia: any;
+    especialidade : Especialidade;
+
+    patologia: Patologia;
       
 }

@@ -5,6 +5,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
+import { Especialidade } from 'src/app/enums/especialidade';
+import { Patologia } from 'src/app/enums/patologia';
 
 @Component({
   selector: 'app-casos-clinicos-view',
@@ -33,8 +35,9 @@ export class CasosClinicosViewComponent implements OnInit {
     historiaPatologicaPregressa: '',
     historiaFamiliar: '',
     historiaPsicossocial: '',
-    tipoEspecialidade: '',
-    patologia:''
+    especialidade: Especialidade.CLINICA_MEDICA,
+    tipoEspecialidade: Especialidade.CLINICA_MEDICA,
+    patologia: Patologia.ACIDOSE
 
   }
 

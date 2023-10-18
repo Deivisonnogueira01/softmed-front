@@ -177,16 +177,14 @@
     <mat-form-field class="fullWidth" appearance="legacy">
       <mat-label>Especialidade</mat-label>
       <mat-select
-        [(ngModel)]="casoClinico.tipoEspecialidade"
+        [(ngModel)]="selectedEspecialidade"
         name="tipoEspecialidade"
         [formControl]="tipoEspecialidade"
         required
       >
-        <mat-option value="OBSTETRICIA">OBSTETRICIA</mat-option>
-        <mat-option value="MEDICINA_DA_FAMILIA">MEDICINA_DA_FAMILIA</mat-option>
-        <mat-option value="GINECOLOGIA">GINECOLOGIA</mat-option>
-        <mat-option value="CLINICA_MEDICA">CLINICA_MEDICA</mat-option>
-        <mat-option value="PEDIATRIA">PEDIATRIA</mat-option>
+      <mat-option *ngFor="let tipoEspecialidade of especialidades" [value]="tipoEspecialidade">{{
+        tipoEspecialidade
+      }}</mat-option>
       </mat-select>
     </mat-form-field>
 

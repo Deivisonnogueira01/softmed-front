@@ -88,7 +88,6 @@ export class CasosClinicosCreateComponent implements OnInit {
 
   onInputChangeNumero(event: any): void {
     const inputValue = event.target.value;
-    // Filtra caracteres não numéricos usando uma expressão regular
     this.casoClinico.numero = inputValue.replace(/[^0-9]/g, '');
   }
 
@@ -99,10 +98,11 @@ export class CasosClinicosCreateComponent implements OnInit {
     }, ex => {
       if (ex.error.errors) {
         ex.error.errors.forEach(element => {
-          this.toast.error(element.message);
+          this.toast.error('Erro ao Cadastrar Caso Clinico');
         });
       } else {
         this.toast.error(ex.error.message);
+        this.toast.error('Usuário Não tem Acesso a essa Função!');
       }
     })
   }

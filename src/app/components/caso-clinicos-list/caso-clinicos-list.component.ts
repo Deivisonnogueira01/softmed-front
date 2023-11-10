@@ -7,6 +7,10 @@ import { Patologia } from 'src/app/enums/patologia';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
 import { Especialidade } from './../../enums/especialidade';
+import { ExamesSoroLab } from 'src/app/model/exames-soro-lab';
+import { ExamesImagem } from 'src/app/model/exames-imagem';
+import { ExamesFisicos } from 'src/app/model/exames-fisicos';
+import { TestesFarmacologicos } from 'src/app/model/testes-farmacologicos';
 
 @Component({
   selector: 'app-caso-clinicos-list',
@@ -16,6 +20,11 @@ import { Especialidade } from './../../enums/especialidade';
 export class CasoClinicosListComponent implements OnInit {
 
   ELEMENT_DATA: CasoClinico[] = []
+
+  examesSoroLab: ExamesSoroLab[] = [];
+  examesImagem: ExamesImagem[] = [];
+  examesFisicos: ExamesFisicos[] = [];
+  examesTesteFarma: TestesFarmacologicos[] = [];
 
   casoClinico: CasoClinico = {
 
@@ -39,7 +48,12 @@ export class CasoClinicosListComponent implements OnInit {
     historiaPsicossocial: '',
     especialidade: Especialidade.OBSTETRICIA,
     tipoEspecialidade: Especialidade.OBSTETRICIA,
-    patologia: Patologia.ACIDOSE
+    patologia: Patologia.ACIDOSE,
+    examesSoroLab: [],
+    examesImagem: [],
+    examesFisicos: [],
+    examesTestesFarma: []
+    
 
   }
 

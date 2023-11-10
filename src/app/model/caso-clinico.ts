@@ -1,5 +1,9 @@
 import { Especialidade } from "../enums/especialidade";
 import { Patologia } from "../enums/patologia";
+import { ExamesFisicos } from "./exames-fisicos";
+import { ExamesImagem } from "./exames-imagem";
+import { ExamesSoroLab } from "./exames-soro-lab";
+import { TestesFarmacologicos } from "./testes-farmacologicos";
 
 export class CasoClinico {
 
@@ -45,4 +49,11 @@ export class CasoClinico {
 
     patologia: Patologia;
       
+    examesSoroLab: ExamesSoroLab[];
+
+    examesImagem: ExamesImagem[];
+
+    examesFisicos: ExamesFisicos[];
+
+    examesTestesFarma: TestesFarmacologicos[];
 }

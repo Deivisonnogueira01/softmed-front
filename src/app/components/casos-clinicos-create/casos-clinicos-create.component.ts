@@ -5,6 +5,10 @@ import { ToastrService } from 'ngx-toastr';
 import { Especialidade } from 'src/app/enums/especialidade';
 import { Patologia } from 'src/app/enums/patologia';
 import { CasoClinico } from 'src/app/model/caso-clinico';
+import { ExamesFisicos } from 'src/app/model/exames-fisicos';
+import { ExamesImagem } from 'src/app/model/exames-imagem';
+import { ExamesSoroLab } from 'src/app/model/exames-soro-lab';
+import { TestesFarmacologicos } from 'src/app/model/testes-farmacologicos';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
 
 @Component({
@@ -13,6 +17,13 @@ import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
   styleUrls: ['./casos-clinicos-create.component.css']
 })
 export class CasosClinicosCreateComponent implements OnInit {
+
+
+  
+  examesSoroLab: ExamesSoroLab[] = [];
+  examesImagem: ExamesImagem[] = [];
+  examesFisicos: ExamesFisicos[] = [];
+  examesTesteFarma: TestesFarmacologicos[] = [];
 
 
   casoClinico: CasoClinico = {
@@ -38,6 +49,11 @@ export class CasosClinicosCreateComponent implements OnInit {
     especialidade: Especialidade.CLINICA_MEDICA,
     tipoEspecialidade: Especialidade.CLINICA_MEDICA,
     patologia: Patologia.ACIDOSE,
+    examesSoroLab: [],
+    examesImagem: [],
+    examesFisicos: [],
+    examesTestesFarma : []
+    
 
   }
 

@@ -7,5 +7,5 @@ export enum Especialidade {
    CLINICA_MEDICA = "CLINICA_MEDICA",
    PEDIATRIA = "PEDIATRIA"
 
-
+    
 }

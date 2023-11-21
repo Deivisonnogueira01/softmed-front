@@ -1,9 +1,9 @@
 export class TestesFarmacologicos {
 
-    idTestes: number;
+    idTestesDTO?: number;
 
-    testesFarmaCorreto: string;
+    testesFarmaDTOCorreto: string;
 
-    testesFarmaIncorreto: string;
+    testesFarmaDTOIncorreto: string;
 
 }

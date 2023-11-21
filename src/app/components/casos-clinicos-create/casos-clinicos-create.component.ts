@@ -18,13 +18,22 @@ import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
 })
 export class CasosClinicosCreateComponent implements OnInit {
 
-
-  
   examesSoroLab: ExamesSoroLab[] = [];
   examesImagem: ExamesImagem[] = [];
   examesFisicos: ExamesFisicos[] = [];
   examesTesteFarma: TestesFarmacologicos[] = [];
 
+  examesSoroLabCorretos: string[] = [];
+  examesSoroLabIncorretos: string[] = [];
+
+  examesImagemCorretos: string[] = [];
+  examesImagemIncorretos: string[] = [];
+
+  examesFisicosCorretos: string[] = [];
+  examesFisicosIncorretos: string[] = [];
+
+  examesTestesFarmaCorretos: string[] = [];
+  examesTestesFarmaIncorretos: string[] = [];
 
   casoClinico: CasoClinico = {
 
@@ -56,6 +65,8 @@ export class CasosClinicosCreateComponent implements OnInit {
     
 
   }
+
+
 
   numero: FormControl = new FormControl(null);
   nomePaciente: FormControl = new FormControl(null);
@@ -94,6 +105,53 @@ export class CasosClinicosCreateComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  adicionarExameSoroLab(): void {
+       const novoExame: ExamesSoroLab = {
+        examesSoroDTOCorreto: this.examesSoroLabCorretos.join(","),
+        examesSoroDTOIncorreto: this.examesSoroLabIncorretos.join(",")
+       };
+        this.casoClinico.examesSoroLab.push(novoExame);
+
+        this.examesSoroLabCorretos = [];
+        this.examesSoroLabIncorretos = [];
+  }
+
+  adicionarExameFisico(): void {
+     
+      const novoExame: ExamesFisicos = {
+         examesFisicosCorretoDTO : this.examesFisicosCorretos.join(","),
+         examesFisicosIncorretoDTO : this.examesFisicosIncorretos.join(",")
+
+      };
+      this.casoClinico.examesFisicos.push(novoExame);
+
+      this.examesFisicosCorretos = [];
+      this.examesFisicosIncorretos = [];
+  }
+
+  adicionarExameImagem(): void {
+    const novoExame: ExamesImagem = {
+       examesImagemCorreto: this.examesImagemCorretos.join(","),
+       examesImagemIncorretos: this.examesImagemIncorretos.join(",")
+    };
+    this.casoClinico.examesImagem.push(novoExame);
+
+    this.examesImagemCorretos = [];
+    this.examesImagemIncorretos = [];
+  }
+
+  adicionarTesteFarmacologicos(): void {
+    const novoTesteFarma: TestesFarmacologicos = {
+      testesFarmaDTOCorreto: this.examesTestesFarmaCorretos.join(","),
+      testesFarmaDTOIncorreto: this.examesTestesFarmaIncorretos.join(",")
+    };
+     this.casoClinico.examesTestesFarma.push(novoTesteFarma);
+
+     this.examesTestesFarmaCorretos = [];
+     this.examesTestesFarmaIncorretos = [];
+  }
+
 
   onInputChange(event: any): void {
     const inputValue = event.target.value;

@@ -1,10 +1,10 @@
 export class ExamesImagem {
 
-    idExameImagem: number;
+    idExameImagemDTO?: number;
 
     examesImagemCorreto: string;
 
-    examesImagemIncorreto: string;
+    examesImagemIncorretos: string;
     
 
 }

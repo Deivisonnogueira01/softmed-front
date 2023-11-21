@@ -1,10 +1,10 @@
 export class ExamesFisicos {
 
 
-    idExame: number;
+    idExameFisicoDTO?: number;
 
-    examesFisicosCorreto: string;
+    examesFisicosCorretoDTO: string;
 
-    examesFisicosIncorreto: string;
+    examesFisicosIncorretoDTO: string;
 
 }

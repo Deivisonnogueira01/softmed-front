@@ -1,10 +1,11 @@
 export class ExamesSoroLab {
 
 
-    idSoro: number;
+    idExameSoroLabDTO?: number;
 
-    examesSoroCorreto: string;
+    examesSoroDTOCorreto: string;
 
-    examesSoroIncorreto: string;
+    examesSoroDTOIncorreto: string;
+
 
 }

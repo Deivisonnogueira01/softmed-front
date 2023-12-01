@@ -18,23 +18,6 @@ import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
 })
 export class CasosClinicosCreateComponent implements OnInit {
 
-  examesSoroLab: ExamesSoroLab[] = [];
-  examesImagem: ExamesImagem[] = [];
-  examesFisicos: ExamesFisicos[] = [];
-  examesTesteFarma: TestesFarmacologicos[] = [];
-
-  examesSoroLabCorretos: string[] = [];
-  examesSoroLabIncorretos: string[] = [];
-
-  examesImagemCorretos: string[] = [];
-  examesImagemIncorretos: string[] = [];
-
-  examesFisicosCorretos: string[] = [];
-  examesFisicosIncorretos: string[] = [];
-
-  examesTestesFarmaCorretos: string[] = [];
-  examesTestesFarmaIncorretos: string[] = [];
-
   casoClinico: CasoClinico = {
 
     casoClinicoId: 0,
@@ -61,12 +44,10 @@ export class CasosClinicosCreateComponent implements OnInit {
     examesSoroLab: [],
     examesImagem: [],
     examesFisicos: [],
-    examesTestesFarma : []
+    examesTestesFarma :[]
     
 
   }
-
-
 
   numero: FormControl = new FormControl(null);
   nomePaciente: FormControl = new FormControl(null);
@@ -94,6 +75,12 @@ export class CasosClinicosCreateComponent implements OnInit {
   patologias: string[] = Object.values(Patologia);
   selectedPatologia: any;
 
+  examesSoroLabCorretosForm: any[] = [];
+  examesSoroLabIncorretosForm: any[] = [];
+  examesImagemForm: ExamesImagem[] = Object.values(ExamesImagem);
+  examesFisicosForm: ExamesFisicos[] = Object.values(ExamesFisicos);
+  examesTesteFarmaForm: TestesFarmacologicos[] = Object.values(TestesFarmacologicos);
+
   constructor(
     private service: CasoClinicoService,
     private toast: ToastrService,
@@ -105,53 +92,6 @@ export class CasosClinicosCreateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  adicionarExameSoroLab(): void {
-       const novoExame: ExamesSoroLab = {
-        examesSoroDTOCorreto: this.examesSoroLabCorretos.join(","),
-        examesSoroDTOIncorreto: this.examesSoroLabIncorretos.join(",")
-       };
-        this.casoClinico.examesSoroLab.push(novoExame);
-
-        this.examesSoroLabCorretos = [];
-        this.examesSoroLabIncorretos = [];
-  }
-
-  adicionarExameFisico(): void {
-     
-      const novoExame: ExamesFisicos = {
-         examesFisicosCorretoDTO : this.examesFisicosCorretos.join(","),
-         examesFisicosIncorretoDTO : this.examesFisicosIncorretos.join(",")
-
-      };
-      this.casoClinico.examesFisicos.push(novoExame);
-
-      this.examesFisicosCorretos = [];
-      this.examesFisicosIncorretos = [];
-  }
-
-  adicionarExameImagem(): void {
-    const novoExame: ExamesImagem = {
-       examesImagemCorreto: this.examesImagemCorretos.join(","),
-       examesImagemIncorretos: this.examesImagemIncorretos.join(",")
-    };
-    this.casoClinico.examesImagem.push(novoExame);
-
-    this.examesImagemCorretos = [];
-    this.examesImagemIncorretos = [];
-  }
-
-  adicionarTesteFarmacologicos(): void {
-    const novoTesteFarma: TestesFarmacologicos = {
-      testesFarmaDTOCorreto: this.examesTestesFarmaCorretos.join(","),
-      testesFarmaDTOIncorreto: this.examesTestesFarmaIncorretos.join(",")
-    };
-     this.casoClinico.examesTestesFarma.push(novoTesteFarma);
-
-     this.examesTestesFarmaCorretos = [];
-     this.examesTestesFarmaIncorretos = [];
-  }
-
 
   onInputChange(event: any): void {
     const inputValue = event.target.value;
@@ -173,9 +113,10 @@ export class CasosClinicosCreateComponent implements OnInit {
     this.casoClinico.especialidade = this.selectedEspecialidade;
     this.casoClinico.tipoEspecialidade = this.selectedEspecialidade;
     this.casoClinico.patologia = this.selectedPatologia;
+    this.casoClinico.examesSoroLab = this.examesSoroLabCorretosForm;
     this.service.create(this.casoClinico).subscribe(() => {
       this.toast.success('Caso Clinico cadastrado com sucesso', 'Cadastro');
-      this.router.navigate(['home'])
+      this.router.navigate(['create-exame-fisico'])
     }, ex => {
       if (ex.error.errors) {
         ex.error.errors.forEach(element => {

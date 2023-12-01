@@ -32,6 +32,7 @@ import { HipoteseDiagnosticaComponent } from './components/hipotese-diagnostica/
 import { HomeComponent } from "./components/home/home.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
+import { ExamesFisicosComponent } from './components/exames-fisicos/exames-fisicos.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
     CasosClinicosViewComponent,
     HipoteseDiagnosticaComponent,
     CasosClinicosCreateComponent,
+    ExamesFisicosComponent,
   ],
   
   imports: [

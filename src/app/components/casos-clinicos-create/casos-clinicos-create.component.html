@@ -182,9 +182,11 @@
         [formControl]="tipoEspecialidade"
         required
       >
-      <mat-option *ngFor="let tipoEspecialidade of especialidades" [value]="tipoEspecialidade">{{
-        tipoEspecialidade
-      }}</mat-option>
+        <mat-option
+          *ngFor="let tipoEspecialidade of especialidades"
+          [value]="tipoEspecialidade"
+          >{{ tipoEspecialidade }}</mat-option
+        >
       </mat-select>
     </mat-form-field>
 
@@ -201,8 +203,6 @@
         }}</mat-option>
       </mat-select>
     </mat-form-field>
-
-    
 
     <button
       (click)="create()"

@@ -9,6 +9,7 @@ import { HipoteseDiagnosticaComponent } from "./components/hipotese-diagnostica/
 import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { NavComponent } from "./components/nav/nav.component";
+import { ExamesFisicosComponent } from "./components/exames-fisicos/exames-fisicos.component";
 
 
 const routes: Routes = [
@@ -22,7 +23,9 @@ const routes: Routes = [
 
       {path: "hipotese-diagnostica", component: HipoteseDiagnosticaComponent},
 
-      {path: "create", component: CasosClinicosCreateComponent, canActivate: [AuthGuard]}
+      {path: "create", component: CasosClinicosCreateComponent, canActivate: [AuthGuard]},
+
+      {path: "create-exame-fisico", component: ExamesFisicosComponent}
     ]
   }
 ];

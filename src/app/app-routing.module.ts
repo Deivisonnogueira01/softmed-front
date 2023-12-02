@@ -10,6 +10,9 @@ import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { ExamesFisicosComponent } from "./components/exames-fisicos/exames-fisicos.component";
+import { ExamesSoroLabComponent } from "./components/exames-soro-lab/exames-soro-lab.component";
+import { ExamesImagemComponent } from "./components/exames-imagem/exames-imagem.component";
+import { TestesFarmaComponent } from "./components/testes-farma/testes-farma.component";
 
 
 const routes: Routes = [
@@ -25,7 +28,13 @@ const routes: Routes = [
 
       {path: "create", component: CasosClinicosCreateComponent, canActivate: [AuthGuard]},
 
-      {path: "create-exame-fisico/:idCasoClinico", component: ExamesFisicosComponent}
+      {path: "create-exame-fisico/:idCasoClinico", component: ExamesFisicosComponent},
+
+      {path: "create-exame-soro-lab/:idCasoClinico", component: ExamesSoroLabComponent},
+
+      {path: "create-exame-imagem/:idCasoClinico", component: ExamesImagemComponent},
+
+      {path: "create-teste-farma/:idCasoClinico", component: TestesFarmaComponent}
     ]
   }
 ];

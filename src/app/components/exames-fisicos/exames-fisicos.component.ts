@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ExamesFisicosService } from 'src/app/services/exames-fisicos.service';
 
 
@@ -16,7 +17,9 @@ export class ExamesFisicosComponent implements OnInit {
 
   constructor(
     private examesFisicosService: ExamesFisicosService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
+    private toast: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -51,7 +54,9 @@ export class ExamesFisicosComponent implements OnInit {
   
       this.examesFisicosService.create(examesFisicosArray, idCasoClinico).subscribe(
         (examesFisicosCriados) => {
+          this.router.navigate(['create-exame-soro-lab/', idCasoClinico]);
           console.log('Exames físicos criados com sucesso!', examesFisicosCriados);
+          this.toast.success('Exames Físicos Cadastrados com Sucesso', 'Cadastro');
         },
         (error) => {
           console.error('Erro ao criar exames físicos:', error);

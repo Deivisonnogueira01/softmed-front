@@ -4,13 +4,13 @@ export class ExamesImagem {
 
     examesImagemCorreto: string;
 
-    examesImagemIncorretos: string;
+    exameImagemIncorretos: string;
 
-    idCasoClinico: number;  // Adicionando a referência ao caso clínico
+    casoClinicoId: number;  // Adicionando a referência ao caso clínico
 
     constructor(examesImagemCorreto: string, examesImagemIncorretos: string, idCasoClinico: number) {
         this.examesImagemCorreto = examesImagemCorreto;
-        this.examesImagemIncorretos = examesImagemIncorretos;
-        this.idCasoClinico = idCasoClinico;
+        this.exameImagemIncorretos = examesImagemIncorretos;
+        this.casoClinicoId = idCasoClinico;
     }
 }

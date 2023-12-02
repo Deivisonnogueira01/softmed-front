@@ -33,6 +33,9 @@ import { HomeComponent } from "./components/home/home.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 import { ExamesFisicosComponent } from './components/exames-fisicos/exames-fisicos.component';
+import { ExamesSoroLabComponent } from './components/exames-soro-lab/exames-soro-lab.component';
+import { ExamesImagemComponent } from './components/exames-imagem/exames-imagem.component';
+import { TestesFarmaComponent } from './components/testes-farma/testes-farma.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { ExamesFisicosComponent } from './components/exames-fisicos/exames-fisic
     HipoteseDiagnosticaComponent,
     CasosClinicosCreateComponent,
     ExamesFisicosComponent,
+    ExamesSoroLabComponent,
+    ExamesImagemComponent,
+    TestesFarmaComponent,
   ],
   
   imports: [

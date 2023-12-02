@@ -6,12 +6,12 @@ export class TestesFarmacologicos {
 
     testesFarmaDTOIncorreto: string;
 
-    idCasoClinico: number;
+    casoClinicoId: number;
 
     constructor(testesFarmaDTOCorreto: string, testesFarmaDTOIncorreto: string, idCasoClinico: number) {
         this.testesFarmaDTOCorreto = testesFarmaDTOCorreto;
         this.testesFarmaDTOIncorreto = testesFarmaDTOIncorreto;
-        this.idCasoClinico = idCasoClinico;
+        this.casoClinicoId = idCasoClinico;
     }
 
 }

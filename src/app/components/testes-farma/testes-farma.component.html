@@ -1,0 +1,35 @@
+<div class="container mat-elevation-z8">
+    <form class="form" >
+      <h1 class="fullWidth">Cadastrar Testes Farmacologicos</h1>
+  
+      <div
+        *ngFor="let exame of testeFarmaList; let i = index"
+        class="exame-fisico-item"
+      >
+        <label for="testesFarmaDTOCorreto{{ i }}">Exame Correto:</label>
+        <input
+          type="text"
+          id="testesFarmaDTOCorreto{{ i }}"
+          [(ngModel)]="exame.testesFarmaDTOCorreto"
+          name="testesFarmaDTOCorreto{{ i }}" 
+          required
+        />
+  
+        <label for="testesFarmaDTOIncorreto{{ i }}">Exame Incorreto:</label>
+        <input
+          type="text"
+          id="testesFarmaDTOIncorreto{{ i }}"
+          [(ngModel)]="exame.testesFarmaDTOIncorreto"
+          name="testesFarmaDTOIncorreto{{ i }}" 
+        />
+  
+        <button (click)="removerExame(i)">Remover Exame</button>
+      </div>
+  
+      <button (click)="adicionarExame()">Adicionar Exame</button>
+      <button (click)="criarExamesParaCasoClinicoReceiver()"
+      routerLink="/home"
+      >Criar Exames</button>
+    </form>
+  </div>
+  

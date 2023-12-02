@@ -7,13 +7,13 @@ export class ExamesFisicos {
 
     examesFisicosIncorretoDTO: string;
 
-     idCasoClinico: number;
+    casoClinicoId: number;
 
 
      constructor(examesFisicosCorretoDTO: string, examesFisicosIncorretoDTO: string, idCasoClinico: number) {
         this.examesFisicosCorretoDTO = examesFisicosCorretoDTO;
         this.examesFisicosIncorretoDTO = examesFisicosIncorretoDTO;
-        this.idCasoClinico = idCasoClinico;
+        this.casoClinicoId = idCasoClinico;
     }
 
 }

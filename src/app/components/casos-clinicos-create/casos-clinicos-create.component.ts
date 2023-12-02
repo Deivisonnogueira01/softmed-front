@@ -7,7 +7,6 @@ import { Patologia } from 'src/app/enums/patologia';
 import { CasoClinico } from 'src/app/model/caso-clinico';
 import { ExamesFisicos } from 'src/app/model/exames-fisicos';
 import { ExamesImagem } from 'src/app/model/exames-imagem';
-import { ExamesSoroLab } from 'src/app/model/exames-soro-lab';
 import { TestesFarmacologicos } from 'src/app/model/testes-farmacologicos';
 import { CasoClinicoService } from 'src/app/services/caso-clinico.service';
 
@@ -114,24 +113,34 @@ export class CasosClinicosCreateComponent implements OnInit {
     this.casoClinico.tipoEspecialidade = this.selectedEspecialidade;
     this.casoClinico.patologia = this.selectedPatologia;
     this.casoClinico.examesSoroLab = this.examesSoroLabCorretosForm;
-    this.service.create(this.casoClinico).subscribe(() => {
-      this.toast.success('Caso Clinico cadastrado com sucesso', 'Cadastro');
-      this.router.navigate(['create-exame-fisico'])
-    }, ex => {
-      if (ex.error.errors) {
-        ex.error.errors.forEach(element => {
-          this.toast.error('Erro ao Cadastrar Caso Clinico');
-        });
-      } else {
-        this.toast.error(ex.error.message);
-        this.toast.error('Usuário Não tem Acesso a essa Função!');
+  
+    this.service.create(this.casoClinico).subscribe(
+      (casoClinicoCriado) => {
+        const idCasoClinico = casoClinicoCriado.casoClinicoId;
+  
+        this.toast.success('Caso Clinico cadastrado com sucesso', 'Cadastro');
+        
+        // Passando o ID para a rota de exames
+        this.router.navigate(['create-exame-fisico/', idCasoClinico]);
+      },
+      (ex) => {
+        if (ex.error.errors) {
+          ex.error.errors.forEach((element) => {
+            this.toast.error('Erro ao Cadastrar Caso Clinico');
+          });
+        } else {
+          this.toast.error(ex.error.message);
+          this.toast.error('Usuário Não tem Acesso a essa Função!');
+        }
       }
-    })
+    );
   }
+  
 
   validaCampos(): boolean {
     return this.queixaPrincipal.valid
       && this.tipoEspecialidade.valid && this.numero.valid
+      
   }
 
 }

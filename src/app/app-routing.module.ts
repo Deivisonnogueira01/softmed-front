@@ -25,7 +25,7 @@ const routes: Routes = [
 
       {path: "create", component: CasosClinicosCreateComponent, canActivate: [AuthGuard]},
 
-      {path: "create-exame-fisico", component: ExamesFisicosComponent}
+      {path: "create-exame-fisico/:idCasoClinico", component: ExamesFisicosComponent}
     ]
   }
 ];

@@ -1,9 +1,23 @@
 <div>
+  <div class="container">
+    <h1 class="mat-elevation-z8">SOFTMED - Hipótese Diagnóstica</h1>
+  </div>
 
-    <div class="container">
-        <h1 class="mat-elevation-z8">SOFTMED - Hipótese Diagnóstica</h1>
-      </div>
-
-
-      <button mat-button (click)="openDialog()">Open dialog</button>
-</div>
+  <div *ngIf="opcoesDiagnostico.length > 0">
+    <h2>Escolha a hipótese diagnóstica correta:</h2>
+    <div *ngFor="let opcao of opcoesDiagnostico">
+      <label>
+        <input
+          type="radio"
+          [(ngModel)]="hipoteseDiagnostica"
+          name="hipoteseDiagnostica"
+          [value]="opcao"
+          id="{{ opcao }}"
+        />
+        {{ opcao }}
+      </label>
+    </div>
+    <button (click)="avaliarHipoteseDiagnostica()">Avaliar Hipótese</button>
+    <button (click)="navegarProximaEtapa()">Próxima Etapa</button>
+  </div>
+  

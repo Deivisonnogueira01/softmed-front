@@ -95,8 +95,10 @@ export class CasosClinicosViewComponent implements OnInit {
     })
   }
 
-  //this.toastService.success('Caso Clinico Finalizado Com Sucesso');
   finalizar(): void {
-    this.router.navigate(['hipotese-diagnostica']);
+    if (this.casoClinico?.casoClinicoId) {
+      this.router.navigate(['/hipotese-diagnostica', this.casoClinico.casoClinicoId]);
+    }
   }
+
 }

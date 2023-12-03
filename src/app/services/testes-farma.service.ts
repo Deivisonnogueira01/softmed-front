@@ -12,10 +12,10 @@ export class TestesFarmaService {
 
     constructor(private http: HttpClient) {}
 
-  create(examesFisicosArray: any[], idCasoClinico: any): Observable<TestesFarmacologicos[]> {
+  create(testesFarmaArray: any[], idCasoClinico: any): Observable<TestesFarmacologicos[]> {
     return this.http.post<TestesFarmacologicos[]>(
       `${API_CONFIG.baseUrl}/teste-farma/?idCasoClinico=${idCasoClinico}`,
-      examesFisicosArray
+      testesFarmaArray
     ).pipe(
       catchError(this.handleError)
     );

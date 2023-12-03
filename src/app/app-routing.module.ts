@@ -24,7 +24,7 @@ const routes: Routes = [
       { path: "casos-clinicos", component: CasoClinicosListComponent },
       { path: "casos-clinicos/view/:casoClinicoId", component: CasosClinicosViewComponent },
 
-      {path: "hipotese-diagnostica", component: HipoteseDiagnosticaComponent},
+      { path: "hipotese-diagnostica/:id", component: HipoteseDiagnosticaComponent },
 
       {path: "create", component: CasosClinicosCreateComponent, canActivate: [AuthGuard]},
 

@@ -1,3 +1,4 @@
+import { HipotesTestesFarmaComponent } from './components/hipotese-testes-farma/hipotese-testes-farma.component';
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { MatCardModule } from "@angular/material/card";
@@ -9,6 +10,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatTableModule } from "@angular/material/table";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -27,15 +29,18 @@ import { ToastrModule } from "ngx-toastr";
 import { CasoClinicosListComponent } from './components/caso-clinicos-list/caso-clinicos-list.component';
 import { CasosClinicosCreateComponent } from './components/casos-clinicos-create/casos-clinicos-create.component';
 import { CasosClinicosViewComponent } from './components/casos-clinicos-view/casos-clinicos-view.component';
+import { ExamesFisicosComponent } from './components/exames-fisicos/exames-fisicos.component';
+import { ExamesImagemComponent } from './components/exames-imagem/exames-imagem.component';
+import { ExamesSoroLabComponent } from './components/exames-soro-lab/exames-soro-lab.component';
 import { HeaderComponent } from "./components/header/header.component";
 import { HipoteseDiagnosticaComponent } from './components/hipotese-diagnostica/hipotese-diagnostica.component';
+import { HipoteseExamesFisicosComponent } from './components/hipotese-exames-fisicos/hipotese-exames-fisicos.component';
+import { HipoteseExamesSoroComponent } from "./components/hipotese-exames-soro/hipotese-exames-soro.component";
 import { HomeComponent } from "./components/home/home.component";
 import { NavComponent } from "./components/nav/nav.component";
-import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
-import { ExamesFisicosComponent } from './components/exames-fisicos/exames-fisicos.component';
-import { ExamesSoroLabComponent } from './components/exames-soro-lab/exames-soro-lab.component';
-import { ExamesImagemComponent } from './components/exames-imagem/exames-imagem.component';
 import { TestesFarmaComponent } from './components/testes-farma/testes-farma.component';
+import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
+import { HipoteseExamesImagemComponent } from "./components/hipotese-exames-imagem/hipotese-exames-imagem.component";
 
 @NgModule({
   declarations: [
@@ -52,6 +57,10 @@ import { TestesFarmaComponent } from './components/testes-farma/testes-farma.com
     ExamesSoroLabComponent,
     ExamesImagemComponent,
     TestesFarmaComponent,
+    HipoteseExamesFisicosComponent,
+    HipoteseExamesSoroComponent,
+    HipoteseExamesImagemComponent,
+    HipotesTestesFarmaComponent
   ],
   
   imports: [

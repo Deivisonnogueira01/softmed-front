@@ -40,31 +40,6 @@ export class HipoteseDiagnosticaComponent implements OnInit {
     });
   }
 
-
- /* embaralharOpcoesDiagnostico(): void {
-    // Crie uma cópia do enum para não alterar a ordem original
-    const patologias = [...Object.values(Patologia)];
-  
-    // Remova a patologia correta, se estiver presente
-    const index = patologias.indexOf(this.casoClinico?.patologia);
-    if (index !== -1) {
-      patologias.splice(index, 1);
-    }
-  
-    // Embaralhe a ordem usando o algoritmo de Fisher-Yates
-    for (let i = patologias.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [patologias[i], patologias[j]] = [patologias[j], patologias[i]];
-    }
-  
-    // Adicione a patologia correta ao início do array
-    patologias.unshift(this.casoClinico?.patologia);
-  
-    // Selecione as primeiras 5 patologias (ou quantas desejar)
-    this.opcoesDiagnostico = patologias.slice(0, 5);
-  }
-  */
-
   embaralharOpcoesDiagnostico(): void {
     // Crie uma cópia do enum para não alterar a ordem original
     const patologias = [...Object.values(Patologia)];
@@ -95,12 +70,11 @@ export class HipoteseDiagnosticaComponent implements OnInit {
   avaliarHipoteseDiagnostica(): void {
     if (this.hipoteseDiagnostica === this.casoClinico?.patologia) {
       this.toast.success('Hipótese correta!');
-      // Outras ações necessárias
     } else {
       this.toast.error('Hipótese incorreta. Tente novamente.');
-      this.router.navigate(['/home']);
+      this.router.navigate([`/casos-clinicos/view/${this.casoClinico.casoClinicoId}`]);
 
-      // Outras ações necessárias
+    
     }
   }
 

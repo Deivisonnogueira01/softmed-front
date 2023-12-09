@@ -1,84 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  .container {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-   margin-top: 1rem;
-   border: 1px solid rgb(161, 159, 159);
-   padding: 1rem 10%;
-   border-radius: 2rem;
+  margin-top: 1rem;
+  border: 1px solid rgb(161, 159, 159);
+  padding: 1rem 10%;
+  border-radius: 2rem;
+}
+
+h1.mat-elevation-z8 {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hipotese-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.hipotese-options {
+  width: 48%; /* Ajuste conforme necessário */
+
+}
+
+h2 {
+  margin-top: auto;
+  font-size: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+  margin-right: 10px; /* Adicionado espaço à direita */
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #3d79e7; /* Azul para avaliar hipótese */
+  color: #fff; /* Texto branco para melhor visibilidade */
 }
 
 
-  h1.mat-elevation-z8 {
-    margin: 0;
-  }
+.proxima {
+  background-color: #e6e92a; /* Amarelo para próxima etapa */
+  color: #000; /* Texto preto para melhor visibilidade */
+}
 
-  * {
-    box-sizing: border-box;
-  }
+.proxima:hover {
+  filter: brightness(1.2); /* Efeito de brilho ao passar o mouse */
+}
 
-  div[ngIf] {
-    margin-top: 20px;
-    padding: 20px;
-    width: 50%; /* Ajuste a largura conforme necessário */
-    float: left; /* Posiciona à esquerda */
-  }
+.mat-form-field-custom {
+  width: 48%; /* Ajuste conforme necessário */
+  margin-top: 20px;
+}
 
-  h2 {
-    font-size: 18px;
-  }
+textarea {
+  width: calc(100% - 20px);
+  height: 250px;
+  font-size: 20px;
+  color: #000000;
+}
 
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  button {
-   margin-top: 10px;
-   margin-right: 10px; /* Espaçamento entre botões */
-   padding: 10px;
-   border: none;
-   cursor: pointer;
-   
- }
-
- #avaliar-button {
-   background-color: #2ecc71; /* Cor de exemplo, substitua pela cor desejada */
-   color: #ffffff;
- }
-
- #proximo-button {
-   background-color: #f1c40f; /* Cor amarela para "Próxima Etapa" */
-   color: #ffffff;
- }
+textarea::placeholder {
+  font-size: 70px;
+  color: #000000;
+}
 
 
- mat-form-field {
-   float: right; /* Posiciona à direita */
-   width: 50%; /* Ajuste a largura conforme necessário */
-   margin-top: 10px; /* Ajusta a margem superior */
- }
 
- textarea {
-   width: calc(100% - 20px); /* Ajusta a largura com margens */
-   height: 250px; /* Ajuste a altura conforme necessário */
-   font-size: 20px; /* Ajusta o tamanho da fonte */
-   color: #000000;
+.avaliacao-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
 
- }
-
- textarea::placeholder {
-   font-size: 40px; /* Ajuste o tamanho da fonte do placeholder conforme necessário */
-   color: #000000; /* Cor do placeholder, substitua pela cor desejada */
- }
 

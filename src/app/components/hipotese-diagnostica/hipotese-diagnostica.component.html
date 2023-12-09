@@ -1,10 +1,10 @@
-<div>
-  <div class="container">
-    <h1 class="mat-elevation-z8">SOFTMED - Hipótese Diagnóstica</h1>
-  </div>
+<div class="container">
+  <h1 class="mat-elevation-z8">SOFTMED - Hipótese Diagnóstica</h1>
+</div>
 
-  <div *ngIf="opcoesDiagnostico.length > 0">
-    <h2>Escolha a hipótese diagnóstica correta:</h2>
+<div *ngIf="opcoesDiagnostico.length > 0" class="hipotese-container">
+  <div class="hipotese-options">
+    <h2>Selecione o seu provável diagnóstico:</h2>
     <div *ngFor="let opcao of opcoesDiagnostico">
       <label>
         <input
@@ -18,21 +18,42 @@
       </label>
     </div>
 
-    <div class="avaliar-button">
-      <button (click)="avaliarHipoteseDiagnostica()">Avaliar Hipótese</button>
-    </div>
-   
+    <button
+      (click)="avaliarHipoteseDiagnostica()"
+      class="full-width mat-elevation-z4"
+      mat-raised-button
+      color="primary"
+    >
+      Avaliar Hipótese
+    </button>
 
-    <div class="proximo-button">
-      <button (click)="navegarProximaEtapa()">Próxima Etapa</button>
-    </div>
-   
-
-
-    <mat-form-field>
-      <textarea matInput placeholder="Notebook" matTextareaAutosize matAutosizeMinRows="2"
-                matAutosizeMaxRows="5"></textarea>
-    </mat-form-field>
-
+    <button
+      (click)="navegarProximaEtapa()"
+      class="full-width mat-elevation-z4 proxima"
+      mat-stroked-button
+      color="warn"
+    >
+      Próxima Etapa
+    </button>
   </div>
-  
+
+  <mat-form-field class="mat-form-field-custom">
+    <textarea
+      matInput
+      placeholder="Notebook"
+      matTextareaAutosize
+      matAutosizeMinRows="2"
+      matAutosizeMaxRows="5"
+    ></textarea>
+  </mat-form-field>
+
+  <mat-dialog-content>
+    <p>Como você avalia o nosso aplicativo?</p>
+    <div class="avaliacao-buttons">
+      <button mat-button (click)="avaliar('bom')">😃 Bom</button>
+      <button mat-button (click)="avaliar('mediano')">😐 Mediano</button>
+      <button mat-button (click)="avaliar('ruim')">😞 Ruim</button>
+    </div>
+  </mat-dialog-content>
+
+</div>

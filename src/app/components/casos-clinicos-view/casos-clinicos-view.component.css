@@ -24,10 +24,42 @@
  }
 
  
- button {
-    margin-top: .5rem;
+
+ button{
+    background: #2561cf;
+    box-shadow: none;
+    border: none;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: .5rem;
  }
  
+ .cancelar {
+   background: #e6e92a;
+   box-shadow: none;
+    border: none;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: .5rem;
+ }
+
+ .cancelar:hover {
+   background: #ecee73;
+
+ }
+ 
+ button:hover{
+   background: #3d79e7;
+ 
+ }
  p {
     margin-top: 3rem;
     opacity: .5;

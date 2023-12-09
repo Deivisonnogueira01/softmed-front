@@ -2,37 +2,44 @@
 
     <form class="form mat-elevation-z8">
  
-       <h1>Acesso ao Sistema</h1>
- 
-      <img src="assets/img/login.png" alt="">
+       <h1>SOFTMED</h1>
+      
+      <div class="div-img">
+         <img src="assets/img/pngegg.png" alt="">
 
-       <mat-form-field class="full-width" appearance="outline">
+      </div>
+      <div class="forms">
          <mat-label>E-mail</mat-label>
-         <input 
-         [formControl]="email"
-         required
-         [(ngModel)]="creds.email" 
-         name="email" 
-         matInput 
-         placeholder="Ex. fulano@mail.com">
-         <mat-icon matSuffix>email</mat-icon>
-      </mat-form-field>
-     
-  
-      <mat-form-field class="full-width" appearance="outline">
+         <mat-form-field appearance="outline">
+            <input 
+            [formControl]="email"
+            required
+            [(ngModel)]="creds.email" 
+            name="email" 
+            matInput 
+            placeholder="Ex. fulano@mail.com">
+            <mat-icon matSuffix>email</mat-icon>
+         </mat-form-field>
+        
          <mat-label>Senha</mat-label>
-         <input 
-         [formControl]="senha"
-         required
-         [(ngModel)]="creds.senha" 
-         name="senha" 
-         type="password" 
-         matInput 
-         placeholder="Ex. 123">
-         <mat-icon matSuffix>password</mat-icon>
-      </mat-form-field>
-   
-     <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-stroked-button color="primary"> Entrar</button>
+         <mat-form-field appearance="outline">
+            <input 
+            [formControl]="senha"
+            required
+            [(ngModel)]="creds.senha" 
+            name="senha" 
+            type="password" 
+            matInput 
+            placeholder="Ex. 123">
+            <mat-icon matSuffix>password</mat-icon>
+         </mat-form-field>
+      </div>
+     
+      
+      <div class="div-button">
+         <button (click)="logar()" [disabled]="!validaCampos()"  mat-stroked-button color="primary"> Entrar</button>
+      </div>
+     
      
     </form>
     

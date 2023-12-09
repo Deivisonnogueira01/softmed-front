@@ -1,18 +1,84 @@
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
- 
- h1 {
-    margin-top: 1rem;
-    border: 1px solid rgb(161, 159, 159);
-    padding: 1rem 10%;
-    border-radius: 2rem;
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+h1 {
+   margin-top: 1rem;
+   border: 1px solid rgb(161, 159, 159);
+   padding: 1rem 10%;
+   border-radius: 2rem;
+}
+
+
+  h1.mat-elevation-z8 {
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  div[ngIf] {
+    margin-top: 20px;
+    padding: 20px;
+    width: 50%; /* Ajuste a largura conforme necessário */
+    float: left; /* Posiciona à esquerda */
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  button {
+   margin-top: 10px;
+   margin-right: 10px; /* Espaçamento entre botões */
+   padding: 10px;
+   border: none;
+   cursor: pointer;
+   
  }
 
- 
- .container {
-    width: 90%;
-    margin: auto;
+ #avaliar-button {
+   background-color: #2ecc71; /* Cor de exemplo, substitua pela cor desejada */
+   color: #ffffff;
  }
+
+ #proximo-button {
+   background-color: #f1c40f; /* Cor amarela para "Próxima Etapa" */
+   color: #ffffff;
+ }
+
+
+ mat-form-field {
+   float: right; /* Posiciona à direita */
+   width: 50%; /* Ajuste a largura conforme necessário */
+   margin-top: 10px; /* Ajusta a margem superior */
+ }
+
+ textarea {
+   width: calc(100% - 20px); /* Ajusta a largura com margens */
+   height: 250px; /* Ajuste a altura conforme necessário */
+   font-size: 20px; /* Ajusta o tamanho da fonte */
+   color: #000000;
+
+ }
+
+ textarea::placeholder {
+   font-size: 40px; /* Ajuste o tamanho da fonte do placeholder conforme necessário */
+   color: #000000; /* Cor do placeholder, substitua pela cor desejada */
+ }
+

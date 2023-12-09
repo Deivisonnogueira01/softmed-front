@@ -17,7 +17,22 @@
         {{ opcao }}
       </label>
     </div>
-    <button (click)="avaliarHipoteseDiagnostica()">Avaliar Hipótese</button>
-    <button (click)="navegarProximaEtapa()">Próxima Etapa</button>
+
+    <div class="avaliar-button">
+      <button (click)="avaliarHipoteseDiagnostica()">Avaliar Hipótese</button>
+    </div>
+   
+
+    <div class="proximo-button">
+      <button (click)="navegarProximaEtapa()">Próxima Etapa</button>
+    </div>
+   
+
+
+    <mat-form-field>
+      <textarea matInput placeholder="Notebook" matTextareaAutosize matAutosizeMinRows="2"
+                matAutosizeMaxRows="5"></textarea>
+    </mat-form-field>
+
   </div>
   

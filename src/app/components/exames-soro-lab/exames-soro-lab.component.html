@@ -1,33 +1,54 @@
 <div class="container mat-elevation-z8">
-    <form class="form" >
-      <h1 class="fullWidth">Cadastrar Exames de Soro Lab</h1>
-  
-      <div
-        *ngFor="let exame of examesSoroLabList; let i = index"
-        class="exame-fisico-item"
+  <form class="form">
+    <h1 class="fullWidth">Cadastrar Exames de Soro Lab</h1>
+
+    <div
+      *ngFor="let exame of examesSoroLabList; let i = index"
+      class="exame-fisico-item"
+    >
+      <label for="examesSoroDTOCorreto{{ i }}">Exame Correto:</label>
+      <input
+        type="text"
+        id="examesSoroDTOCorreto{{ i }}"
+        [(ngModel)]="exame.examesSoroDTOCorreto"
+        name="examesSoroDTOCorreto{{ i }}"
+        required
+      />
+
+      <label for="examesSoroDTOIncorreto{{ i }}">Exame Incorreto:</label>
+      <input
+        type="text"
+        id="examesSoroDTOIncorreto{{ i }}"
+        [(ngModel)]="exame.examesSoroDTOIncorreto"
+        name="examesSoroDTOIncorreto{{ i }}"
+      />
+
+      <button
+        (click)="removerExame(i)"
+        class="full-width mat-elevation-z4 remover"
+        mat-raised-button
+        color="primary"
       >
-        <label for="examesSoroDTOCorreto{{ i }}">Exame Correto:</label>
-        <input
-          type="text"
-          id="examesSoroDTOCorreto{{ i }}"
-          [(ngModel)]="exame.examesSoroDTOCorreto"
-          name="examesSoroDTOCorreto{{ i }}" 
-          required
-        />
-  
-        <label for="examesSoroDTOIncorreto{{ i }}">Exame Incorreto:</label>
-        <input
-          type="text"
-          id="examesSoroDTOIncorreto{{ i }}"
-          [(ngModel)]="exame.examesSoroDTOIncorreto"
-          name="examesSoroDTOIncorreto{{ i }}" 
-        />
-  
-        <button (click)="removerExame(i)">Remover Exame</button>
-      </div>
-  
-      <button (click)="adicionarExame()">Adicionar Exame</button>
-      <button (click)="criarExamesParaCasoClinicoReceiver()">Criar Exames</button>
-    </form>
-  </div>
-  
+        Remover Exame
+      </button>
+    </div>
+
+    <button
+      (click)="adicionarExame()"
+      class="full-width mat-elevation-z4 adicionar"
+      mat-raised-button
+      color="primary"
+    >
+      Adicionar Exame
+    </button>
+
+    <button
+      (click)="criarExamesParaCasoClinicoReceiver()"
+      class="full-width mat-elevation-z4 criar"
+      mat-stroked-button
+      color="warn"
+    >
+      Criar Exames
+    </button>
+  </form>
+</div>

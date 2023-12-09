@@ -23,11 +23,25 @@
           name="testesFarmaDTOIncorreto{{ i }}" 
         />
   
-        <button (click)="removerExame(i)">Remover Exame</button>
+        <button (click)="removerExame(i)"
+        class="full-width mat-elevation-z4 remover"
+        mat-raised-button
+        color="primary"
+        >Remover Exame
+      </button>
       </div>
   
-      <button (click)="adicionarExame()">Adicionar Exame</button>
+      <button (click)="adicionarExame()"
+      class="full-width mat-elevation-z4 adicionar"
+      mat-raised-button
+      color="primary"
+      >Adicionar Exame
+      </button>
+
       <button (click)="criarExamesParaCasoClinicoReceiver()"
+      class="full-width mat-elevation-z4 criar"
+      mat-stroked-button
+      color="warn"
       routerLink="/home"
       >Criar Exames</button>
     </form>

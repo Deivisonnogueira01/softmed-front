@@ -38,6 +38,16 @@
   </div>
 
   <mat-form-field class="mat-form-field-custom">
+    
+    <mat-icon class="icone-informativo" matSuffix>info</mat-icon>
+    <!-- Adicione a mensagem informativa -->
+    <span class="mensagem-informativa">
+      Você pode utilizar esse espaço para escrever livremente sobre suas ideias,
+      conceitos, dúvidas, de forma livre para poder determinar seu diagnóstico
+      provável. Nada do que for incluído nesse espaço será utilizado em seu
+      desempenho de resolucão !</span
+    >
+
     <textarea
       matInput
       placeholder="Notebook"
@@ -47,13 +57,18 @@
     ></textarea>
   </mat-form-field>
 
-  <mat-dialog-content>
-    <p>Como você avalia o nosso aplicativo?</p>
-    <div class="avaliacao-buttons">
-      <button mat-button (click)="avaliar('bom')">😃 Bom</button>
-      <button mat-button (click)="avaliar('mediano')">😐 Mediano</button>
-      <button mat-button (click)="avaliar('ruim')">😞 Ruim</button>
-    </div>
-  </mat-dialog-content>
-
+  <!-- Mova o conteúdo do diálogo para um botão de abertura -->
+  <button mat-button class="avaliacao-button" (click)="abrirDialogo()">
+    Avaliação do Aplicativo
+  </button>
 </div>
+
+<!-- Adicione o diálogo aqui, inicialmente oculto -->
+<mat-dialog-content *ngIf="mostrarDialogo">
+  <p>Como você avalia o nosso aplicativo?</p>
+  <div class="avaliacao-buttons">
+    <button mat-button (click)="avaliar('bom')">😃 Bom</button>
+    <button mat-button (click)="avaliar('mediano')">😐 Mediano</button>
+    <button mat-button (click)="avaliar('ruim')">😞 Ruim</button>
+  </div>
+</mat-dialog-content>

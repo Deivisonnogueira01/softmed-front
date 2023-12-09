@@ -1,43 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  width: 35rem;
-  margin: auto;
-  padding: 1rem;
-  border-radius: .6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container.mat-elevation-z8 {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px; /* Ajuste conforme necessário */
 }
 
 .fullWidth {
   width: 100%;
 }
 
-h1, p {
-  text-align: center;
+.exame-fisico-item {
+  margin-bottom: 20px;
 }
 
-img {
-  height: 12rem;
-  margin: auto;
+label {
+  display: block;
+  margin-bottom: 8px;
 }
 
-.section {
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: space-between;
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.widgets {
- min-height: 8rem;
- max-height: 12rem;
-}
-
+/* Adicione margin-bottom específico para esses dois botões */
 button {
-  margin-top: .5rem;
+  background-color: #3d79e7;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 20px; /* Adicione esta linha para todos os botões */
 }
 
-p {
-  margin-top: 4rem;
-  opacity: .5;
+.remover {
+  background-color: red; /* Azul para avaliar hipótese */
+  color: #fff;
 }
 
-mat-icon {
-  opacity: .8;
+.criar {
+  margin-top: 10px;
+  margin-right: 10px; /* Adicionado espaço à direita */
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #3d79e7; /* Azul para avaliar hipótese */
+  color: #fff;
+}
+
+.adicionar {
+  background-color: #e6e92a; /* Amarelo para próxima etapa */
+  color: #000; /* Texto preto para melhor visibilidade */
+}
+
+/* Estilos responsivos conforme necessário */
+@media screen and (max-width: 600px) {
+  .container.mat-elevation-z8 {
+    padding: 10px;
+  }
+
+  input {
+    margin-bottom: 12px;
+  }
+
+ 
+  
 }

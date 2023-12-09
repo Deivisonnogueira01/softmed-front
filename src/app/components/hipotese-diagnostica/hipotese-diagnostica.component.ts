@@ -18,6 +18,7 @@ export class HipoteseDiagnosticaComponent implements OnInit {
 
   opcoesDiagnostico: Patologia[] = [];
   bloquearProximaEtapa = true; // Inicializado como verdadeiro
+  mostrarDialogo = false;
 
   constructor(
     public dialog: MatDialog,
@@ -74,6 +75,10 @@ export class HipoteseDiagnosticaComponent implements OnInit {
    
       
     }
+  }
+
+  abrirDialogo(): void {
+    this.mostrarDialogo = true;
   }
 
   avaliar(avaliacao: string): void {

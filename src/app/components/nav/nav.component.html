@@ -4,7 +4,7 @@
          <img src="assets/img/doctor-svgrepo-com.svg" alt="Imagem de navegação">
       </div>
        
-       <mat-nav-list class="navbar-list">
+       <div class="navbar-list">
          <div>
             <a routerLink="home">
                <i class="material-icons">home</i>
@@ -21,14 +21,15 @@
                Cadastros
             </a>
          </div>
+         <div>
+            <a (click)="logout()" class="logout">
+               <i class="material-icons">logout</i>
+               Logout
+            </a>
+         </div>
          
-
-         <a (click)="logout()" class="logout">
-             <i class="material-icons">logout</i>
-             Logout
-          </a>
          
-       </mat-nav-list>
+       </div>
     </mat-drawer>
  
     <div class="sidenav-content">

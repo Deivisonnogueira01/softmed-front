@@ -4,7 +4,7 @@
 
     <div
       *ngFor="let exame of examesImagemList; let i = index"
-      class="exame-fisico-item"
+      class="exame-imagem-item"
     >
       <label for="examesImagemCorreto{{ i }}">Exame Correto:</label>
       <input
@@ -25,7 +25,7 @@
 
       <button
         (click)="removerExame(i)"
-        class="full-width mat-elevation-z4 adicionar"
+        class="full-width mat-elevation-z4 remover"
         mat-raised-button
         color="primary"
       >
@@ -33,19 +33,24 @@
       </button>
     </div>
 
-    <button (click)="adicionarExame()"
-    class="full-width mat-elevation-z4 adicionar"
-    mat-stroked-button
-    color="primary">
-    Adicionar Exame</button>
+    <div class="botoes-escolha">
+      <button
+        (click)="adicionarExame()"
+        class="full-width mat-elevation-z4 adicionar"
+        mat-stroked-button
+        color="primary"
+      >
+        Adicionar Exame
+      </button>
 
-    <button (click)="criarExamesParaCasoClinicoReceiver()"
-    class="full-width mat-elevation-z4 criar"
-    mat-stroked-button
-    color="warn"
-    >
-    Criar Exames
-  </button>
-
+      <button
+        (click)="criarExamesParaCasoClinicoReceiver()"
+        class="full-width mat-elevation-z4 criar"
+        mat-stroked-button
+        color="warn"
+      >
+        Criar Exames
+      </button>
+    </div>
   </form>
 </div>

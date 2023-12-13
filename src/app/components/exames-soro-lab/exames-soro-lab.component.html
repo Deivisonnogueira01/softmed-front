@@ -4,7 +4,7 @@
 
     <div
       *ngFor="let exame of examesSoroLabList; let i = index"
-      class="exame-fisico-item"
+      class="exame-soro-item"
     >
       <label for="examesSoroDTOCorreto{{ i }}">Exame Correto:</label>
       <input
@@ -33,22 +33,24 @@
       </button>
     </div>
 
-    <button
-      (click)="adicionarExame()"
-      class="full-width mat-elevation-z4 adicionar"
-      mat-raised-button
-      color="primary"
-    >
-      Adicionar Exame
-    </button>
+    <div class="botoes-escolha">
+      <button
+        (click)="adicionarExame()"
+        class="full-width mat-elevation-z4 adicionar"
+        mat-raised-button
+        color="primary"
+      >
+        Adicionar Exame
+      </button>
 
-    <button
-      (click)="criarExamesParaCasoClinicoReceiver()"
-      class="full-width mat-elevation-z4 criar"
-      mat-stroked-button
-      color="warn"
-    >
-      Criar Exames
-    </button>
+      <button
+        (click)="criarExamesParaCasoClinicoReceiver()"
+        class="full-width mat-elevation-z4 criar"
+        mat-stroked-button
+        color="warn"
+      >
+        Criar Exames
+      </button>
+    </div>
   </form>
 </div>

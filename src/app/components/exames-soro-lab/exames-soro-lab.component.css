@@ -19,14 +19,14 @@ body {
 
 .form {
   width: 100%;
-  max-width: 600px; /* Ajuste conforme necessário */
+  max-width: 600px;
 }
 
 .fullWidth {
   width: 100%;
 }
 
-.exame-fisico-item {
+.exame-soro-item {
   margin-bottom: 20px;
 }
 
@@ -44,7 +44,6 @@ input {
   box-sizing: border-box;
 }
 
-/* Adicione margin-bottom específico para esses dois botões */
 button {
   background-color: #3d79e7;
   color: #fff;
@@ -52,30 +51,39 @@ button {
   padding: 10px;
   cursor: pointer;
   border-radius: 4px;
-  margin-bottom: 20px; /* Adicione esta linha para todos os botões */
+  margin-bottom: 20px;
+  border-right: 1rem;
 }
 
 .remover {
-  background-color: red; /* Azul para avaliar hipótese */
+  background-color: red;
   color: #fff;
 }
 
 .criar {
-  margin-top: 10px;
   margin-right: 10px; /* Adicionado espaço à direita */
   padding: 10px;
   border: none;
   cursor: pointer;
   background-color: #3d79e7; /* Azul para avaliar hipótese */
   color: #fff;
+  margin-bottom: 1rem;
 }
 
 .adicionar {
   background-color: #e6e92a; /* Amarelo para próxima etapa */
   color: #000; /* Texto preto para melhor visibilidade */
+  margin-bottom: 1rem;
 }
 
-/* Estilos responsivos conforme necessário */
+.botoes-escolha {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+
 @media screen and (max-width: 600px) {
   .container.mat-elevation-z8 {
     padding: 10px;
@@ -84,7 +92,5 @@ button {
   input {
     margin-bottom: 12px;
   }
-
- 
   
 }

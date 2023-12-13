@@ -1,13 +1,19 @@
-.container {
-    height: 100vh;
+* {
+   box-sizing: border-box;
+}
 
+.container {
+    height: 100%;
+    overflow-x: hidden;
 }
  
  .sidenav {
-    width: 15rem;
-    color: white;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
+   width: 15rem;
+   height: 100vh;
+   color: white;
+   background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
  }
+
  .img {
    width: 100%;
    display: flex;
@@ -22,6 +28,7 @@
  
  .sidenav a {
     color: white;
+    text-decoration: none;
  }
  
  .sidenav i {
@@ -33,17 +40,19 @@
    display: flex;
    flex-direction: column;
    justify-content: space-between;
- }
+   gap: 5rem;
+}
+
 .navbar-list div{
    display: flex;
    flex-direction: column;
-   margin-bottom: 18rem;
+   justify-content: space-between;
 }
 
 .navbar-list a {
    display: flex;
-   padding: 1rem 0;
    padding-left: .5rem;
+   padding: 1rem ;
    transition: .3s ease-in-out;
    cursor: pointer;
 }

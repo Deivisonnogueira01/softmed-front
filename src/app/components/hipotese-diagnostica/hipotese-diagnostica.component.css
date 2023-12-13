@@ -33,8 +33,7 @@ h1.mat-elevation-z8 {
 }
 
 .hipotese-options {
-  width: 48%; /* Ajuste conforme necessário */
-
+  width: 48%;
 }
 
 h2 {
@@ -49,26 +48,26 @@ label {
 
 button {
   margin-top: 10px;
-  margin-right: 10px; /* Adicionado espaço à direita */
+  margin-right: 10px;
   padding: 10px;
   border: none;
   cursor: pointer;
-  background-color: #3d79e7; /* Azul para avaliar hipótese */
-  color: #fff; /* Texto branco para melhor visibilidade */
+  background-color: #3d79e7;
+  color: #fff;
 }
 
 
 .proxima {
-  background-color: #e6e92a; /* Amarelo para próxima etapa */
-  color: #000; /* Texto preto para melhor visibilidade */
+  background-color: #e6e92a;
+  color: #000; 
 }
 
 .proxima:hover {
-  filter: brightness(1.2); /* Efeito de brilho ao passar o mouse */
+  filter: brightness(1.2);
 }
 
 .mat-form-field-custom {
-  width: 48%; /* Ajuste conforme necessário */
+  width: 48%;
   margin-top: 20px;
 }
 
@@ -85,14 +84,14 @@ textarea::placeholder {
 }
 
 .icone-informativo {
-  color: #9e9e9e; /* Cor cinza para o ícone informativo */
+  color: #9e9e9e;
   cursor: pointer;
 }
 
 .mensagem-informativa {
   margin-top: 50px;
   font-size: 12px;
-  color: #9e9e9e; /* Cor cinza para a mensagem informativa */
+  color: #9e9e9e;
   margin-left: 8px; /* Espaço à esquerda da mensagem */
 }
 

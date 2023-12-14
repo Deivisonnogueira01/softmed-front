@@ -183,6 +183,20 @@
       ></textarea>
     </mat-form-field>
 
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Conduta Terapêutica</mat-label>
+      <textarea
+        name="condutaTerapeutica"
+        [(ngModel)]="casoClinico.condutaTerapeutica"
+        [formControl]="condutaTerapeutica"
+        readonly
+        class="widgets"
+        matInput
+        placeholder="..."
+      ></textarea>
+    </mat-form-field>
+
+
   </form>
 
   <button

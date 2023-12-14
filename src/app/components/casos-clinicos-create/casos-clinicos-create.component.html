@@ -175,6 +175,17 @@
     </mat-form-field>
 
     <mat-form-field class="fullWidth" appearance="legacy">
+      <mat-label>Conduta Terapêutica</mat-label>
+      <textarea
+        [(ngModel)]="casoClinico.condutaTerapeutica"
+        name="condutaTerapeutica"
+        [formControl]="condutaTerapeutica"
+        class="widgets"
+        matInput
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="fullWidth" appearance="legacy">
       <mat-label>Especialidade</mat-label>
       <mat-select
         [(ngModel)]="selectedEspecialidade"

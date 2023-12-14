@@ -37,6 +37,7 @@ export class CasosClinicosCreateComponent implements OnInit {
     historiaPatologicaPregressa: '',
     historiaFamiliar: '',
     historiaPsicossocial: '',
+    condutaTerapeutica: '',
     especialidade: Especialidade.CLINICA_MEDICA,
     tipoEspecialidade: Especialidade.CLINICA_MEDICA,
     patologia: Patologia.ACIDOSE,
@@ -44,8 +45,6 @@ export class CasosClinicosCreateComponent implements OnInit {
     examesImagem: [],
     examesFisicos: [],
     examesTestesFarma :[]
-    
-
   }
 
   numero: FormControl = new FormControl(null);
@@ -65,6 +64,7 @@ export class CasosClinicosCreateComponent implements OnInit {
   historiaPatologicaPregressa: FormControl = new FormControl(null);
   historiaFamiliar: FormControl = new FormControl(null);
   historiaPsicossocial: FormControl = new FormControl(null);
+  condutaTerapeutica: FormControl = new FormControl(null);
   tipoEspecialidade: FormControl = new FormControl(null);
   patologia: FormControl = new FormControl(null);
 

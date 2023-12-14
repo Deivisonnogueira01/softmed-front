@@ -46,6 +46,7 @@ export class CasoClinicosListComponent implements OnInit {
     historiaPatologicaPregressa: '',
     historiaFamiliar: '',
     historiaPsicossocial: '',
+    condutaTerapeutica: '',
     especialidade: Especialidade.OBSTETRICIA,
     tipoEspecialidade: Especialidade.OBSTETRICIA,
     patologia: Patologia.ACIDOSE,

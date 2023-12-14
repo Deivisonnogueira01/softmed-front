@@ -65,19 +65,4 @@ export class TestesFarmaComponent implements OnInit {
   }
 
 
-  criarExamesParaCasoClinico(testesFarmaArray: any[], idCasoClinico: number): void {
-    testesFarmaArray.forEach((testeFarna) => {
-      this.service.create(testeFarna, idCasoClinico).subscribe(
-        () => {
-          console.log('Teste Farma criado com sucesso!');
-
-        },
-        (error) => {
-          console.error('Erro ao criar Teste Farma:', error);
-        }
-      );
-    });
-  }
-  
-
 }

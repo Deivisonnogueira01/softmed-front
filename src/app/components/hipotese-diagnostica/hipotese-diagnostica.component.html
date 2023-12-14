@@ -29,6 +29,7 @@
 
     <button
       (click)="navegarProximaEtapa()"
+      [disabled]="bloquearProximaEtapa || !validaCampos()"
       class="full-width mat-elevation-z4 proxima"
       mat-stroked-button
       color="warn"
@@ -38,13 +39,7 @@
   </div>
 
   <mat-form-field class="mat-form-field-custom">
-    
     <mat-icon class="icone-informativo" matSuffix>info</mat-icon>
-    <!-- Adicione a mensagem informativa -->
-    <span class="mensagem-informativa" >
-    </span
-    >
-
     <textarea
       matInput
       placeholder="Escreva aqui suas anotações"
@@ -54,15 +49,18 @@
     ></textarea>
   </mat-form-field>
 
-  <!-- Mova o conteúdo do diálogo para um botão de abertura -->
-  <button mat-button class="avaliacao-button" (click)="abrirDialogo()">
+  <button
+    mat-button
+    class="avaliacao-button"
+    (click)="abrirDialogo()"
+    [disabled]="bloquearProximaEtapa"
+  >
     Avaliação do Aplicativo
   </button>
 </div>
 
-<!-- Adicione o diálogo aqui, inicialmente oculto -->
 <mat-dialog-content *ngIf="mostrarDialogo">
-  <p>Como você avalia o nosso aplicativo?</p>
+  <p>Como você avalia o nosso Aplicativo?</p>
   <div class="avaliacao-buttons">
     <button mat-button (click)="avaliar('bom')">😃 Bom</button>
     <button mat-button (click)="avaliar('mediano')">😐 Mediano</button>

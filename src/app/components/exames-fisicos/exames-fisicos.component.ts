@@ -15,6 +15,8 @@ export class ExamesFisicosComponent implements OnInit {
 
   @Output() examesFisicosChange = new EventEmitter<any[]>();
 
+  bloquearProximaEtapa = true; // Inicializado como verdadeiro
+
   constructor(
     private examesFisicosService: ExamesFisicosService,
     private route: ActivatedRoute,
@@ -51,7 +53,7 @@ export class ExamesFisicosComponent implements OnInit {
         examesFisicosCorretoDTO: exame.examesFisicosCorretoDTO,
         examesFisicosIncorretoDTO: exame.examesFisicosIncorretoDTO
       }));
-  
+
       this.examesFisicosService.create(examesFisicosArray, idCasoClinico).subscribe(
         (examesFisicosCriados) => {
           this.router.navigate(['create-exame-soro-lab/', idCasoClinico]);
@@ -65,21 +67,6 @@ export class ExamesFisicosComponent implements OnInit {
     });
   }
 
-
-  criarExamesParaCasoClinico(examesFisicosArray: any[], idCasoClinico: number): void {
-    examesFisicosArray.forEach((exameFisico) => {
-      this.examesFisicosService.create(exameFisico, idCasoClinico).subscribe(
-        () => {
-          console.log('Exame físico criado com sucesso!');
-
-        },
-        (error) => {
-          console.error('Erro ao criar exame físico:', error);
-        }
-      );
-    });
-  }
-  
 
 
 }

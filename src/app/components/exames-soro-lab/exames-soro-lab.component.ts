@@ -65,20 +65,5 @@ export class ExamesSoroLabComponent implements OnInit {
       );
     });
   }
-
-
-  criarExamesParaCasoClinico(examesSoroArray: any[], idCasoClinico: number): void {
-    examesSoroArray.forEach((exameSoro) => {
-      this.service.create(exameSoro, idCasoClinico).subscribe(
-        () => {
-          console.log('Exame Soro Lab criado com sucesso!');
-
-        },
-        (error) => {
-          console.error('Erro ao criar exame Soro Lab:', error);
-        }
-      );
-    });
-  }
-
+  
 }

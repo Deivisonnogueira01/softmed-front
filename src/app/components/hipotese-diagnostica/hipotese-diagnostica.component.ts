@@ -61,20 +61,30 @@ export class HipoteseDiagnosticaComponent implements OnInit {
 
   avaliarHipoteseDiagnostica(): void {
     if (this.hipoteseDiagnostica === this.casoClinico?.patologia) {
-      this.toast.success('Hipótese correta!');
+      this.toast.success('Hipótese correta, Parabéns!');
       this.bloquearProximaEtapa = false; // Desbloqueia o botão após avaliação correta
     } else {
-      this.toast.error('Hipótese incorreta. Tente novamente.');
-      this.router.navigate([`/casos-clinicos/view/${this.casoClinico.casoClinicoId}`]);
+      this.toast.error('Hipótese incorreta. Tente novamente!');
+      this.bloquearProximaEtapa = true;
     }
   }
+  
 
  
   navegarProximaEtapa(): void {
     if (!this.bloquearProximaEtapa) {
    
-      
     }
+  }
+
+  validaCampos(): boolean {
+    if (this.hipoteseDiagnostica === this.casoClinico?.patologia) {
+      console.log("DEU CERTO")
+      return true
+     
+    }
+    console.log("ERROU")
+    return false
   }
 
   abrirDialogo(): void {
@@ -85,6 +95,7 @@ export class HipoteseDiagnosticaComponent implements OnInit {
     this.router.navigate(['/home']);
     this.toast.info("Avaliação Finalizada")
   }
+
 }
 
 

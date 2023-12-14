@@ -67,19 +67,4 @@ criarExamesParaCasoClinicoReceiver(): void {
 
 }
 
-
-criarExamesParaCasoClinico(examesImagemArray: any[], idCasoClinico: number): void {
-  examesImagemArray.forEach((exameImagem) => {
-    this.service.create(exameImagem, idCasoClinico).subscribe(
-      () => {
-        console.log('Exame Imagem criado com sucesso!');
-
-      },
-      (error) => {
-        console.error('Erro ao criar exame de Imagem:', error);
-      }
-    );
-  });
-}
-
 }

@@ -96,12 +96,12 @@ textarea::placeholder {
 }
 
 
-/* Adicione esta regra para esconder o diálogo inicialmente */
-.avaliacao-button + mat-dialog-content {
-  display: none;
+
+.avaliacao-button {
+ /* display: none;*/
+  margin-right: 10px;
 }
 
-/* Adicione estas regras para ajustar a aparência responsiva */
 @media screen and (max-width: 600px) {
   .hipotese-options {
     flex-direction: column;

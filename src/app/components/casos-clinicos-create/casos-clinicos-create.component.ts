@@ -85,9 +85,7 @@ export class CasosClinicosCreateComponent implements OnInit {
     private toast: ToastrService,
     private router: Router,
 
-  ) {
-
-  }
+  ) {}
 
   ngOnInit(): void {
   }
@@ -138,7 +136,7 @@ export class CasosClinicosCreateComponent implements OnInit {
   
 
   validaCampos(): boolean {
-    return this.queixaPrincipal.valid
+    return this.selectedPatologia && this.queixaPrincipal.valid
       && this.tipoEspecialidade.valid && this.numero.valid
       
   }

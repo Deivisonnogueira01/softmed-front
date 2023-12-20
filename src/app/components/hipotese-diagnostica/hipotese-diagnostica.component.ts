@@ -17,7 +17,7 @@ export class HipoteseDiagnosticaComponent implements OnInit {
   hipoteseDiagnostica: Patologia = Patologia.AMIGDALITE_AGUDA;
 
   opcoesDiagnostico: Patologia[] = [];
-  bloquearProximaEtapa = true; // Inicializado como verdadeiro
+  bloquearProximaEtapa = true;
   mostrarDialogo = false;
 
   constructor(
@@ -70,7 +70,6 @@ export class HipoteseDiagnosticaComponent implements OnInit {
   }
   
 
- 
   navegarProximaEtapa(): void {
     if (!this.bloquearProximaEtapa) {
    
@@ -79,11 +78,9 @@ export class HipoteseDiagnosticaComponent implements OnInit {
 
   validaCampos(): boolean {
     if (this.hipoteseDiagnostica === this.casoClinico?.patologia) {
-      console.log("DEU CERTO")
       return true
      
     }
-    console.log("ERROU")
     return false
   }
 

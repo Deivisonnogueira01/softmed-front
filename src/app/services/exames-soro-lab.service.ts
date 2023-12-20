@@ -18,11 +18,6 @@ export class ExamesSoroLabService {
     return this.http.get<ExamesSoroLab[]>(`${API_CONFIG.baseUrl}/exames-soro`,);
    }
 
-
-  /*findById(casoClinicoId: any): Observable<ExamesSoroLab> {
-        return this.http.get<CasoClinico>(`${API_CONFIG.baseUrl}/casos-clinicos/${casoClinicoId}`);
-    }*/
-
   create(examesSoroLabArray: any[], idCasoClinico: any): Observable<ExamesSoroLab[]> {
     return this.http.post<ExamesSoroLab[]>(
       `${API_CONFIG.baseUrl}/exames-soro/?idCasoClinico=${idCasoClinico}`,
